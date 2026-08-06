@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Social - Projeto Educativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Óptica Social</h1>
+        <p>Entendendo como diferentes lentes moldam nossa visão do mundo.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>O que é Óptica Social?</h2>
+            <p>
+                Assim como lentes físicas alteram a luz, nossas experiências, cultura 
+                e contexto moldam a forma como percebemos problemas e indivíduos na sociedade.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Pesquisas e Estudos</h2>
+            <article class="pesquisa">
+                <h3>Estudo 1: Vieses de Percepção</h3>
+                <p>Insira aqui o resumo do seu primeiro documento de pesquisa...</p>
+            </article>
+            <article class="pesquisa">
+                <h3>Estudo 2: Construção da Empatia</h3>
+                <p>Insira aqui o resumo do seu segundo documento de pesquisa...</p>
+            </article>
+        </section>
+
+        <section class="card interativo">
+            <h2>Simulador de Lentes Sociais</h2>
+            <p>Clique nas lentes abaixo para alterar a perspectiva da visualização:</p>
+            
+            <div class="botoes-lentes">
+                <button onclick="mudarPerspectiva('individual')">Lente Individual</button>
+                <button onclick="mudarPerspectiva('coletiva')">Lente Coletiva</button>
+                <button onclick="mudarPerspectiva('historica')">Lente Histórica</button>
+            </div>
+
+            <div id="caixa-visao" class="visao-box">
+                <p id="texto-visao">Selecione uma lente acima para ver o impacto da perspectiva.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Educativo sobre Óptica Social &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
