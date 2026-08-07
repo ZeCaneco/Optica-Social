@@ -1,4 +1,3 @@
-// Dados da pesquisa mapeados por contexto
 const dadosPesquisa = {
     residencial: {
         titulo: "Contexto Residencial",
@@ -35,12 +34,16 @@ function mudarContexto(contexto) {
     const titulo = document.getElementById('titulo-contexto');
     const conteudo = document.getElementById('conteudo-contexto');
 
+    if (!caixaVisao || !titulo || !conteudo) {
+        console.error("Elementos do HTML não foram encontrados!");
+        return;
+    }
+
     const dados = dadosPesquisa[contexto];
 
     if (dados) {
         titulo.innerText = dados.titulo;
         
-        // Monta a lista de equipamentos em HTML
         let listaEquipamentos = dados.equipamentos.map(eq => `<li>${eq}</li>`).join('');
 
         conteudo.innerHTML = `
@@ -50,7 +53,6 @@ function mudarContexto(contexto) {
             <p><strong>Princípios Ópticos:</strong> ${dados.principios}</p>
         `;
 
-        // Aplica cores temáticas dinamicamente
         caixaVisao.style.backgroundColor = dados.corFundo;
         caixaVisao.style.borderColor = dados.corBorda;
     }
