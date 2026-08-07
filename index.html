@@ -15,69 +15,55 @@
     </header>
 
     <main>
-        <section class="card">
-            <h2>Perguntas de Física e Tecnociência: A Natureza da Luz</h2>
-            
-            <article class="topico-teorico">
-                <h3>a) Primeiras teorias na Antiguidade</h3>
-                <p>Na Antiguidade, alguns filósofos gregos acreditavam que a luz era formada por pequenas partículas, as quais se propagavam em linha reta e com alta velocidade.</p>
-            </article>
+        <section class="card interativo">
+            <h2>Evolução Histórica: A Natureza da Luz</h2>
+            <p>Clique em um cientista ou período para descobrir sua teoria sobre a luz:</p>
 
-            <article class="topico-teorico">
-                <h3>b) A luz segundo Huygens</h3>
-                <p>Christian Huygens explicou a reflexão e a refração tratando a luz como uma onda.</p>
-                <ul>
-                    <li><strong>Princípio chave:</strong> Cada ponto de uma frente de onda gera novas ondas menores.</li>
-                    <li><strong>Reflexão:</strong> As ondas batem na superfície e voltam juntas, mantendo o mesmo ângulo.</li>
-                    <li><strong>Refração:</strong> A luz muda de velocidade ao trocar de meio (ex: do ar para a água), entortando a frente de onda e mudando de direção.</li>
-                </ul>
-            </article>
+            <div class="botoes-lentes">
+                <button onclick="mostrarTeoria('antiguidade')">🏛️ Antiguidade</button>
+                <button onclick="mostrarTeoria('huygens')">🌊 Huygens</button>
+                <button onclick="mostrarTeoria('newton')">🌈 Newton</button>
+                <button onclick="mostrarTeoria('young')">🔬 Young</button>
+                <button onclick="mostrarTeoria('maxwell')">⚡ Maxwell</button>
+                <button onclick="mostrarTeoria('einstein')">⚛️ Einstein</button>
+                <button onclick="mostrarTeoria('debroglie')">🔄 De Broglie</button>
+            </div>
 
-            <article class="topico-teorico">
-                <h3>c) Contribuição de Isaac Newton</h3>
-                <p>Isaac Newton demonstrou que a luz branca é formada por várias cores. Usando um prisma, mostrou que a luz pode ser decomposta nas cores do arco-íris e depois reunida novamente, servindo de base para o avanço dos telescópios e instrumentos ópticos.</p>
-            </article>
-
-            <article class="topico-teorico">
-                <h3>d) Experimento de Thomas Young (1801)</h3>
-                <p>Com o experimento da dupla fenda, Young demonstrou os fenômenos de interferência e difração, fundamentais para estabelecer a natureza ondulatória da luz e desafiar o modelo corpuscular de Newton.</p>
-            </article>
-
-            <article class="topico-teorico">
-                <h3>e) O Eletromagnetismo de Maxwell</h3>
-                <p>Maxwell demonstrou através de oscilações dos campos elétrico e magnético que a luz é uma onda eletromagnética que se propaga no espaço.</p>
-            </article>
-
-            <article class="topico-teorico">
-                <h3>f) Os Fótons de Einstein e o Efeito Fotoelétrico</h3>
-                <p>Para explicar o efeito fotoelétrico, Einstein percebeu que a luz também se comporta como partículas (fótons). Cada fóton carrega um pacote de energia proporcional à sua frequência (cor), revolucionando a física quântica.</p>
-            </article>
-
-            <article class="topico-teorico">
-                <h3>g) A Dualidade e De Broglie</h3>
-                <p>Louis de Broglie elucidou a questão ao demonstrar a dualidade onda-partícula, unificando os comportamentos explicados desde Descartes e Newton até a física moderna.</p>
-            </article>
+            <div id="caixa-teoria" class="visao-box">
+                <h3 id="titulo-teoria">Selecione um período acima</h3>
+                <div id="conteudo-teoria">
+                    <p>Clique nos botões da linha do tempo para explorar a evolução histórica da física óptica!</p>
+                </div>
+            </div>
         </section>
 
         <section class="card artigo">
-            <h2>Artigo: A Luz e Sua Importância para a Óptica</h2>
+            <h2>Artigo: A Luz e Sua Importância</h2>
             <p>
-                A luz faz parte da nossa vida diariamente, pois nos permite enxergar o mundo ao nosso redor. 
-                Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar, podendo se deslocar até mesmo no vácuo. Além disso, ela também é formada por pequenas partículas chamadas fótons.
-            </p>
-            <p>
-                O estudo da luz trouxe grandes avanços para a ciência e tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades. Além disso, a luz é essencial para a fotossíntese nas plantas e a manutenção da vida no planeta.
+                A luz faz parte da nossa vida diariamente, nos permitindo enxergar o mundo ao nosso redor. 
+                Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar.
             </p>
 
-            <div class="referencias">
-                <h4>Referências Bibliográficas:</h4>
-                <ul>
-                    <li>EISBERG, R.; RESNICK, R. <em>Física Quântica</em>. Rio de Janeiro: Campus.</li>
-                    <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Rio de Janeiro: LTC.</li>
-                    <li>HECHT, E. <em>Óptica</em>. 5. ed. São Paulo: Pearson.</li>
-                    <li>TIPLER, P. A.; MOSCA, G. <em>Física para Cientistas e Engenheiros</em>. Rio de Janeiro: LTC.</li>
-                </ul>
+            <div id="mais-conteudo-artigo" class="conteudo-escondido">
+                <p>
+                    Além de seu comportamento como onda, ela também é formada por pequenas partículas chamadas fótons. 
+                    Essa dupla característica ajuda a explicar fenômenos como a reflexão da luz em espelhos, a refração em lentes e a formação das cores.
+                </p>
+                <p>
+                    O estudo da luz trouxe grandes avanços para a ciência e tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades.
+                </p>
+                <div class="referencias">
+                    <h4>Referências Bibliográficas:</h4>
+                    <ul>
+                        <li>EISBERG, R.; RESNICK, R. <em>Física Quântica</em>. Rio de Janeiro: Campus.</li>
+                        <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Rio de Janeiro: LTC.</li>
+                        <li>HECHT, E. <em>Óptica</em>. 5. ed. São Paulo: Pearson.</li>
+                        <li>TIPLER, P. A.; MOSCA, G. <em>Física para Cientistas e Engenheiros</em>. Rio de Janeiro: LTC.</li>
+                    </ul>
+                </div>
             </div>
+
+            <button id="btn-ler-mais" onclick="alternarArtigo()">📖 Ler artigo completo</button>
         </section>
 
         <section class="card interativo">
