@@ -35,7 +35,6 @@ function mudarContexto(contexto) {
     const conteudo = document.getElementById('conteudo-contexto');
 
     if (!caixaVisao || !titulo || !conteudo) {
-        console.error("Elementos do HTML não foram encontrados!");
         return;
     }
 

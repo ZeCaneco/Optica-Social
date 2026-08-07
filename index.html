@@ -3,29 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipamentos Ópticos no Dia a Dia</title>
+    <title>Óptica Social & História da Luz</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
-        <h1>Equipamentos Ópticos no Dia a Dia</h1>
-        <p>Como a reflexão, refração, difração e absorção da luz transformam diferentes contextos sociais.</p>
+        <h1>Óptica Social & História da Luz</h1>
+        <p>A evolução científica da luz e suas aplicações práticas na sociedade.</p>
     </header>
 
     <main>
         <section class="card">
-            <h2>O que é Óptica Aplicada?</h2>
+            <h2>Perguntas de Física e Tecnociência: A Natureza da Luz</h2>
+            
+            <article class="topico-teorico">
+                <h3>a) Primeiras teorias na Antiguidade</h3>
+                <p>Na Antiguidade, alguns filósofos gregos acreditavam que a luz era formada por pequenas partículas, as quais se propagavam em linha reta e com alta velocidade.</p>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>b) A luz segundo Huygens</h3>
+                <p>Christian Huygens explicou a reflexão e a refração tratando a luz como uma onda.</p>
+                <ul>
+                    <li><strong>Princípio chave:</strong> Cada ponto de uma frente de onda gera novas ondas menores.</li>
+                    <li><strong>Reflexão:</strong> As ondas batem na superfície e voltam juntas, mantendo o mesmo ângulo.</li>
+                    <li><strong>Refração:</strong> A luz muda de velocidade ao trocar de meio (ex: do ar para a água), entortando a frente de onda e mudando de direção.</li>
+                </ul>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>c) Contribuição de Isaac Newton</h3>
+                <p>Isaac Newton demonstrou que a luz branca é formada por várias cores. Usando um prisma, mostrou que a luz pode ser decomposta nas cores do arco-íris e depois reunida novamente, servindo de base para o avanço dos telescópios e instrumentos ópticos.</p>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>d) Experimento de Thomas Young (1801)</h3>
+                <p>Com o experimento da dupla fenda, Young demonstrou os fenômenos de interferência e difração, fundamentais para estabelecer a natureza ondulatória da luz e desafiar o modelo corpuscular de Newton.</p>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>e) O Eletromagnetismo de Maxwell</h3>
+                <p>Maxwell demonstrou através de oscilações dos campos elétrico e magnético que a luz é uma onda eletromagnética que se propaga no espaço.</p>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>f) Os Fótons de Einstein e o Efeito Fotoelétrico</h3>
+                <p>Para explicar o efeito fotoelétrico, Einstein percebeu que a luz também se comporta como partículas (fótons). Cada fóton carrega um pacote de energia proporcional à sua frequência (cor), revolucionando a física quântica.</p>
+            </article>
+
+            <article class="topico-teorico">
+                <h3>g) A Dualidade e De Broglie</h3>
+                <p>Louis de Broglie elucidou a questão ao demonstrar a dualidade onda-partícula, unificando os comportamentos explicados desde Descartes e Newton até a física moderna.</p>
+            </article>
+        </section>
+
+        <section class="card artigo">
+            <h2>Artigo: A Luz e Sua Importância para a Óptica</h2>
             <p>
-                A óptica estuda o comportamento da luz e suas interações com a matéria. Fenômenos como 
-                <strong>reflexão, refração, difração e absorção</strong> estão presentes em ferramentas e 
-                tecnologias que utilizamos diariamente para melhorar o bem-estar, a eficiência e a segurança na sociedade.
+                A luz faz parte da nossa vida diariamente, pois nos permite enxergar o mundo ao nosso redor. 
+                Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar, podendo se deslocar até mesmo no vácuo. Além disso, ela também é formada por pequenas partículas chamadas fótons.
             </p>
+            <p>
+                O estudo da luz trouxe grandes avanços para a ciência e tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades. Além disso, a luz é essencial para a fotossíntese nas plantas e a manutenção da vida no planeta.
+            </p>
+
+            <div class="referencias">
+                <h4>Referências Bibliográficas:</h4>
+                <ul>
+                    <li>EISBERG, R.; RESNICK, R. <em>Física Quântica</em>. Rio de Janeiro: Campus.</li>
+                    <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Rio de Janeiro: LTC.</li>
+                    <li>HECHT, E. <em>Óptica</em>. 5. ed. São Paulo: Pearson.</li>
+                    <li>TIPLER, P. A.; MOSCA, G. <em>Física para Cientistas e Engenheiros</em>. Rio de Janeiro: LTC.</li>
+                </ul>
+            </div>
         </section>
 
         <section class="card interativo">
             <h2>Explore por Contexto Social</h2>
-            <p>Clique em um contexto abaixo para visualizar as aplicações práticas e seus princípios ópticos:</p>
+            <p>Clique em um contexto abaixo para ver a aplicação prática dos equipamentos e princípios ópticos:</p>
             
             <div class="botoes-lentes">
                 <button onclick="mudarContexto('residencial')">🏠 Residencial</button>
@@ -41,40 +98,11 @@
                 </div>
             </div>
         </section>
-
-        <section class="card">
-            <h2>Resumo das Aplicações</h2>
-            
-            <article class="pesquisa">
-                <h3>1. Contexto Residencial</h3>
-                <p><strong>Equipamentos:</strong> Lâmpadas LED, espelhos, câmeras de segurança, óculos de grau, binóculos e lunetas.</p>
-                <p><strong>Princípios:</strong> Iluminação, reflexão de imagens, captura e refração da luz em lentes para correção visual e ampliação do alcance de visão em atividades de lazer.</p>
-            </article>
-
-            <article class="pesquisa">
-                <h3>2. Contexto Comercial</h3>
-                <p><strong>Equipamentos:</strong> Leitores de código de barras, projetores, iluminação decorativa e vitrines.</p>
-                <p><strong>Princípios:</strong> Reflexão e refração do laser para leitura de dados, projeção de feixes luminosos e reflexão controlada para atrair a atenção do consumidor.</p>
-            </article>
-
-            <article class="pesquisa">
-                <h3>3. Contexto Escolar</h3>
-                <p><strong>Equipamentos:</strong> Microscópios ópticos, projetores de imagem, lupas e prismas demonstrativos.</p>
-                <p><strong>Princípios:</strong> Refração através de lentes convergentes/divergentes para ampliação de microrganismos e difração/dispersão da luz para ensino de física básica.</p>
-            </article>
-
-            <article class="pesquisa">
-                <h3>4. Contexto Industrial</h3>
-                <p><strong>Equipamentos:</strong> Lasers de corte e gravação, sensores ópticos, espectrômetros e sistemas de inspeção por imagem.</p>
-                <p><strong>Princípios:</strong> Concentração de feixes fotônicos de alta energia, difração/absorção para análise de materiais e varredura óptica para controle de qualidade.</p>
-            </article>
-        </section>
     </main>
 
     <footer>
-        <p>Pesquisa sobre Equipamentos Ópticos &copy; 2026</p>
+        <p>Projeto Educativo sobre Óptica e Tecnociência &copy; 2026</p>
     </footer>
 
-    <script src="script.js" defer></script>
 </body>
 </html>
