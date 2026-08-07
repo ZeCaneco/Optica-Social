@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #f0f4f8;
+    color: #2d3748;
     line-height: 1.6;
     padding: 20px;
 }
@@ -17,20 +17,21 @@ body {
 header {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
     border-radius: 12px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
 }
 
 /* Container Principal */
 main {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -44,17 +45,23 @@ main {
 }
 
 .card h2 {
-    color: #2c3e50;
+    color: #1e3c72;
     margin-bottom: 15px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
 }
 
 .pesquisa {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #fafafa;
-    border-left: 4px solid #4ca1af;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f7fafc;
+    border-left: 4px solid #2a5298;
+    border-radius: 4px;
+}
+
+.pesquisa h3 {
+    color: #2d3748;
+    margin-bottom: 5px;
 }
 
 /* Área Interativa */
@@ -67,37 +74,45 @@ main {
 
 button {
     flex: 1;
+    min-width: 140px;
     padding: 12px;
     border: none;
-    background-color: #2c3e50;
+    background-color: #1e3c72;
     color: white;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #4ca1af;
+    background-color: #2a5298;
+    transform: translateY(-2px);
 }
 
 .visao-box {
-    padding: 20px;
-    border: 2px dashed #ccc;
+    padding: 25px;
+    border: 2px solid #cbd5e0;
     border-radius: 8px;
-    background-color: #fff;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.4s ease;
+    background-color: #ffffff;
+    min-height: 140px;
+    transition: all 0.3s ease;
+}
+
+.visao-box h3 {
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+.visao-box ul {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 /* Rodapé */
 footer {
     text-align: center;
     margin-top: 40px;
-    color: #777;
+    color: #718096;
     font-size: 0.9rem;
 }

@@ -3,55 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Óptica Social - Projeto Educativo</title>
+    <title>Equipamentos Ópticos no Dia a Dia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Óptica Social</h1>
-        <p>Entendendo como diferentes lentes moldam nossa visão do mundo.</p>
+        <h1>Equipamentos Ópticos no Dia a Dia</h1>
+        <p>Como a reflexão, refração, difração e absorção da luz transformam diferentes contextos sociais.</p>
     </header>
 
     <main>
         <section class="card">
-            <h2>O que é Óptica Social?</h2>
+            <h2>O que é Óptica Aplicada?</h2>
             <p>
-                Assim como lentes físicas alteram a luz, nossas experiências, cultura 
-                e contexto moldam a forma como percebemos problemas e indivíduos na sociedade.
+                A óptica estuda o comportamento da luz e suas interações com a matéria. Fenômenos como 
+                <strong>reflexão, refração, difração e absorção</strong> estão presentes em ferramentas e 
+                tecnologias que utilizamos diariamente para melhorar o bem-estar, a eficiência e a segurança na sociedade.
             </p>
         </section>
 
-        <section class="card">
-            <h2>Pesquisas e Estudos</h2>
-            <article class="pesquisa">
-                <h3>Estudo 1: Vieses de Percepção</h3>
-                <p>Insira aqui o resumo do seu primeiro documento de pesquisa...</p>
-            </article>
-            <article class="pesquisa">
-                <h3>Estudo 2: Construção da Empatia</h3>
-                <p>Insira aqui o resumo do seu segundo documento de pesquisa...</p>
-            </article>
-        </section>
-
         <section class="card interativo">
-            <h2>Simulador de Lentes Sociais</h2>
-            <p>Clique nas lentes abaixo para alterar a perspectiva da visualização:</p>
+            <h2>Explore por Contexto Social</h2>
+            <p>Clique em um contexto abaixo para visualizar as aplicações práticas e seus princípios ópticos:</p>
             
             <div class="botoes-lentes">
-                <button onclick="mudarPerspectiva('individual')">Lente Individual</button>
-                <button onclick="mudarPerspectiva('coletiva')">Lente Coletiva</button>
-                <button onclick="mudarPerspectiva('historica')">Lente Histórica</button>
+                <button onclick="mudarContexto('residencial')">🏠 Residencial</button>
+                <button onclick="mudarContexto('comercial')">🏢 Comercial</button>
+                <button onclick="mudarContexto('escolar')">🏫 Escolar</button>
+                <button onclick="mudarContexto('industrial')">🏭 Industrial</button>
             </div>
 
             <div id="caixa-visao" class="visao-box">
-                <p id="texto-visao">Selecione uma lente acima para ver o impacto da perspectiva.</p>
+                <h3 id="titulo-contexto">Selecione um contexto acima</h3>
+                <div id="conteudo-contexto">
+                    <p>Clique em um dos botões para explorar os equipamentos e princípios físicos envolvidos.</p>
+                </div>
             </div>
+        </section>
+
+        <section class="card">
+            <h2>Resumo das Aplicações</h2>
+            
+            <article class="pesquisa">
+                <h3>1. Contexto Residencial</h3>
+                <p><strong>Equipamentos:</strong> Lâmpadas LED, espelhos, câmeras de segurança, óculos de grau, binóculos e lunetas.</p>
+                <p><strong>Princípios:</strong> Iluminação, reflexão de imagens, captura e refração da luz em lentes para correção visual e ampliação do alcance de visão em atividades de lazer.</p>
+            </article>
+
+            <article class="pesquisa">
+                <h3>2. Contexto Comercial</h3>
+                <p><strong>Equipamentos:</strong> Leitores de código de barras, projetores, iluminação decorativa e vitrines.</p>
+                <p><strong>Princípios:</strong> Reflexão e refração do laser para leitura de dados, projeção de feixes luminosos e reflexão controlada para atrair a atenção do consumidor.</p>
+            </article>
+
+            <article class="pesquisa">
+                <h3>3. Contexto Escolar</h3>
+                <p><strong>Equipamentos:</strong> Microscópios ópticos, projetores de imagem, lupas e prismas demonstrativos.</p>
+                <p><strong>Princípios:</strong> Refração através de lentes convergentes/divergentes para ampliação de microrganismos e difração/dispersão da luz para ensino de física básica.</p>
+            </article>
+
+            <article class="pesquisa">
+                <h3>4. Contexto Industrial</h3>
+                <p><strong>Equipamentos:</strong> Lasers de corte e gravação, sensores ópticos, espectrômetros e sistemas de inspeção por imagem.</p>
+                <p><strong>Princípios:</strong> Concentração de feixes fotônicos de alta energia, difração/absorção para análise de materiais e varredura óptica para controle de qualidade.</p>
+            </article>
         </section>
     </main>
 
     <footer>
-        <p>Projeto Educativo sobre Óptica Social &copy; 2026</p>
+        <p>Pesquisa sobre Equipamentos Ópticos &copy; 2026</p>
     </footer>
 
     <script src="script.js"></script>
