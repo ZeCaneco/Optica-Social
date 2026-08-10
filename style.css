@@ -47,12 +47,13 @@ main {
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 
 button {
     flex: 1;
-    min-width: 120px;
+    min-width: 140px;
     padding: 10px 14px;
     border: none;
     background-color: #1e3c72;
@@ -72,7 +73,7 @@ button:hover {
     padding: 25px;
     border: 2px solid #cbd5e0;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: #f8fafc;
     min-height: 140px;
     transition: all 0.3s ease;
 }
@@ -85,6 +86,10 @@ button:hover {
 .visao-box ul {
     margin-left: 20px;
     margin-top: 8px;
+}
+
+.visao-box p {
+    margin-bottom: 10px;
 }
 
 /* Estilos do Artigo Interativo (Expansível) */

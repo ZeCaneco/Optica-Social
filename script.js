@@ -50,59 +50,59 @@ const contextos = {
   }
 };
 
-// --- NOVO BANCO DE DADOS: ANATOMIA E FÍSICA DA VISÃO (Pesquisa: Produto Final) ---
+// Banco de dados: Anatomia e Física da Visão
 const anatomiaVisao = {
   olho: {
     titulo: "👁️ Anatomia do Olho Humano",
-    texto: "<p>O olho é formado por três camadas:</p><ul><li><strong>Túnica Fibrosa:</strong> Córnea (foca a luz) e Esclera (proteção).</li><li><strong>Túnica Vascular:</strong> Íris (controla luz), Pupila, Cristalino (lente ajustável) e Corpo Ciliar.</li><li><strong>Camada Interna:</strong> Retina (transdução de luz em impulsos elétricos) e Nervo Óptico.</li></ul>"
+    texto: "<p>O olho é formado por três camadas principais:</p><ul><li><strong>Túnica Fibrosa:</strong> Córnea (foca a luz) e Esclera (proteção externa).</li><li><strong>Túnica Vascular:</strong> Íris (controla a entrada de luz), Pupila, Cristalino (lente ajustável) e Corpo Ciliar.</li><li><strong>Camada Interna:</strong> Retina (transdução da luz em impulsos elétricos) e Nervo Óptico.</li></ul>"
   },
   imagem: {
     titulo: "📸 Formação da Imagem",
-    texto: "A luz atravessa a córnea e o cristalino (lentes convergentes), projetando uma imagem real, menor e invertida na retina. Cones e bastonetes convertem esses estímulos em sinais elétricos enviados ao cérebro pelo nervo óptico."
+    texto: "<p>A luz atravessa a córnea e o cristalino (que atuam como lentes convergentes), projetando uma imagem real, menor e invertida na retina. Cones e bastonetes convertem esses estímulos em sinais elétricos que são transmitidos ao cérebro pelo nervo óptico, onde a imagem é interpretada de forma correta.</p>"
   },
   espectro: {
     titulo: "🌈 Espectro Eletromagnético & Luz Visível",
-    texto: "A luz visível situa-se entre 400 nm (violeta) e 700 nm (vermelho). Trata-se da única faixa do espectro que o olho humano consegue detectar e interpretar como cores."
+    texto: "<p>A luz visível situa-se entre aproximadamente 400 nm (violeta) e 700 nm (vermelho). Trata-se da única faixa do espectro eletromagnético que o olho humano é capaz de detectar e interpretar como cores através dos fotorreceptores celulares.</p>"
   },
   fenomenos: {
     titulo: "🔍 Reflexão e Refração",
-    texto: "<p><strong>Reflexão:</strong> A luz retorna ao meio de origem (especular em espelhos ou difusa).</p><p><strong>Refração:</strong> Mudança de velocidade da luz ao mudar de meio (ex: ar para água/vidro), essencial para o funcionamento de lentes de óculos e lupas.</p>"
+    texto: "<p><strong>Reflexão:</strong> Ocorre quando a luz atinge uma superfície e retorna ao meio de origem (pode ser especular em espelhos ou difusa em superfícies irregulares).</p><p><strong>Refração:</strong> Mudança na velocidade e direção da luz ao mudar de meio de propagação (ex: do ar para a água ou vidro). É o princípio fundamental para o funcionamento de lentes de óculos, câmeras e microscópios.</p>"
   }
 };
 
-// --- NOVO BANCO DE DADOS: DEFICIÊNCIAS VISUAIS E ÓCULOS ---
+// Banco de dados: Deficiência Visual e Correção
 const deficienciasEGaleria = {
   cegueira: {
     titulo: "🚫 Cegueira e Baixa Visão",
-    texto: "Perda total ou severa da visão decorrente do bloqueio da passagem da luz (opacidade da córnea/catarata) ou falha na conversão e transmissão dos sinais elétricos ao cérebro (glaucoma e retina)."
+    texto: "<p>A cegueira ou baixa visão decorrem de falhas na passagem da luz (como a opacidade da córnea ou catarata) ou na incapacidade de converter e transmitir sinais elétricos ao cérebro (como em danos na retina ou no nervo óptico provocados pelo glaucoma).</p>"
   },
   patologias: {
     titulo: "🩺 Catarata, Glaucoma e Maculopatia",
-    texto: "<ul><li><strong>Catarata:</strong> Opacificação do cristalino que espalha caoticamente a luz.</li><li><strong>Glaucoma:</strong> Pressão intraocular alta que comprime as fibras do nervo óptico (visão em túnel).</li><li><strong>Degeneração Macular:</strong> Lesão no centro da retina que compromete o foco e os detalhes visuais.</li></ul>"
+    texto: "<ul><li><strong>Catarata:</strong> Opacificação do cristalino que espalha caoticamente os raios luminosos, embaçando a visão.</li><li><strong>Glaucoma:</strong> Aumento da pressão intraocular que comprime e danifica progressivamente as fibras do nervo óptico (perda da visão periférica).</li><li><strong>Degeneração Macular:</strong> Lesão no centro da retina (mácula) que compromete a visão central de detalhes finos.</li></ul>"
   },
   daltonismo: {
     titulo: "🎨 Daltonismo",
-    texto: "Dificuldade em distinguir frequências de luz específicas (principalmente verde e vermelho) devido à ausência ou disfunção dos cones da retina."
+    texto: "<p>Condição genética caracterizada pela dificuldade em distinguir frequências específicas de luz (geralmente verde e vermelho). Isso ocorre devido à ausência ou disfunção parcial dos cones fotorreceptores na retina.</p>"
   },
   oculos: {
     titulo: "👓 Como Funcionam os Óculos",
-    texto: "<ul><li><strong>Lentes Convergentes:</strong> Usadas para hipermetropia; adiantam o ponto focal para que a imagem se forme exatamente na retina.</li><li><strong>Lentes Divergentes:</strong> Usadas para miopia; afastam a trajetória dos raios luminosos para empurrar o foco de volta para a retina.</li></ul>"
+    texto: "<ul><li><strong>Lentes Convergentes (Convexas):</strong> Utilizadas para corrigir a hipermetropia e presbiopia, adiantando o ponto focal para que a imagem se forme exatamente sobre a retina.</li><li><strong>Lentes Divergentes (Côncavas):</strong> Utilizadas para corrigir a miopia, afastando os raios luminosos para adiar o foco e fazê-lo atingir a retina corretamente.</li></ul>"
   }
 };
 
-// --- NOVO BANCO DE DADOS: TECNOLOGIAS ASSISTIVAS E IA ---
+// Banco de dados: Tecnologias Assistivas e IA
 const tecnologiasAssistivasIA = {
   ia: {
     titulo: "🤖 Inteligência Artificial na Visão Computacional",
-    texto: "Sistemas de IA usam câmeras para capturar o ambiente, processar padrões de luz/cores e fornecer respostas em áudio: leitura de textos (OCR), reconhecimento de objetos, identificação de cédulas e reconhecimento facial."
+    texto: "<p>Sistemas modernos de IA utilizam câmeras para capturar imagens em tempo real, processar padrões de cores e objetos, e narrar o ambiente em áudio. Isso possibilita a leitura instantânea de impressos (OCR), identificação de cédulas de dinheiro e reconhecimento de rostos e obstáculos.</p>"
   },
   assistivas: {
     titulo: "🦯 Recursos Tecnológicos Assistivos",
-    texto: "<ul><li><strong>Leitores de Tela:</strong> NVDA, JAWS, VoiceOver e TalkBack traduzem telas para áudio ou Braille.</li><li><strong>Linhas e Impressoras Braille:</strong> Dispositivos eletromecânicos com pinos táticas dinâmicos.</li><li><strong>Lupas Eletrônicas & Óculos Inteligentes:</strong> Equipamentos como OrCam MyEye com microcâmera e IA embarcada.</li></ul>"
+    texto: "<ul><li><strong>Leitores de Tela:</strong> Softwares como NVDA, JAWS, VoiceOver e TalkBack que transformam elementos visuais da tela em fala sintetizada ou braille.</li><li><strong>Linhas Braille Dinâmicas:</strong> Dispositivos eletromecânicos que sobem e descem pinos físicos para permitir a leitura tátil em tempo real.</li><li><strong>Óculos Inteligentes:</strong> Dispositivos como o OrCam MyEye, equipados com microcâmeras e IA embarcada para leitura e auxílio autônomo.</li></ul>"
   },
   desafios: {
     titulo: "💡 Curiosidades & Desafios Educacionais",
-    texto: "<p><strong>Cães-guia:</strong> Treinados em desobediência inteligente para evitar acidentes.</p><p><strong>Semáforos Sonoros:</strong> Usam bips em frequências variáveis e setas táticas para orientar travessias puramente pelo som.</p>"
+    texto: "<p><strong>Cães-guia:</strong> Passam por treinamento intensivo e aprendem a 'desobediência inteligente', recusando ordens do tutor se houver perigo iminente (como um degrau ou buraco).</p><p><strong>Semáforos Sonoros:</strong> Emitem sinais sonoros com frequências e ritmos variados para orientar a travessia segura baseada na percepção auditiva.</p>"
   }
 };
 
@@ -141,14 +141,13 @@ function mudarContexto(chave) {
   }
 }
 
-// Novas funções para carregar os conteúdos da pesquisa
 function mostrarAnatomia(chave) {
   const titulo = document.getElementById('titulo-anatomia');
   const conteudo = document.getElementById('conteudo-anatomia');
 
   if (anatomiaVisao[chave]) {
     titulo.textContent = anatomiaVisao[chave].titulo;
-    conteudo.innerHTML = anatomiaVisao[chave].texto.includes('<p>') ? anatomiaVisao[chave].texto : `<p>${anatomiaVisao[chave].texto}</p>`;
+    conteudo.innerHTML = anatomiaVisao[chave].texto;
   }
 }
 
@@ -158,7 +157,7 @@ function mostrarDeficiencia(chave) {
 
   if (deficienciasEGaleria[chave]) {
     titulo.textContent = deficienciasEGaleria[chave].titulo;
-    conteudo.innerHTML = deficienciasEGaleria[chave].texto.includes('<p>') || deficienciasEGaleria[chave].texto.includes('<ul>') ? deficienciasEGaleria[chave].texto : `<p>${deficienciasEGaleria[chave].texto}</p>`;
+    conteudo.innerHTML = deficienciasEGaleria[chave].texto;
   }
 }
 
@@ -168,6 +167,6 @@ function mostrarAssistiva(chave) {
 
   if (tecnologiasAssistivasIA[chave]) {
     titulo.textContent = tecnologiasAssistivasIA[chave].titulo;
-    conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto.includes('<p>') || tecnologiasAssistivasIA[chave].texto.includes('<ul>') ? tecnologiasAssistivasIA[chave].texto : `<p>${tecnologiasAssistivasIA[chave].texto}</p>`;
+    conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto;
   }
 }
