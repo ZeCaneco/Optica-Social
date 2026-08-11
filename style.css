@@ -1,4 +1,6 @@
-/* Configurações Globais */
+/* ==========================================
+   CONFIGURAÇÕES GLOBAIS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,14 @@ body {
     padding: 20px;
 }
 
-/* Cabeçalho Ajustado com Logo */
+main {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   CABEÇALHO COM LOGO
+   ========================================== */
 header.header-container {
     display: flex;
     align-items: center;
@@ -53,21 +62,9 @@ header.header-container {
     opacity: 0.9;
 }
 
-@media (max-width: 600px) {
-    header.header-container {
-        flex-direction: column;
-    }
-
-    .logo-img {
-        max-width: 90px;
-    }
-}
-
-main {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
+/* ==========================================
+   CARDS E SEÇÕES
+   ========================================== */
 .card {
     background: white;
     padding: 25px;
@@ -83,7 +80,9 @@ main {
     padding-bottom: 8px;
 }
 
-/* Área Interativa dos Botões */
+/* ==========================================
+   ÁREA INTERATIVA & BOTÕES
+   ========================================== */
 .botoes-lentes {
     display: flex;
     gap: 8px;
@@ -110,6 +109,7 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* Caixa de Exibição das Respostas */
 .visao-box {
     padding: 25px;
     border: 2px solid #cbd5e0;
@@ -133,7 +133,9 @@ button:hover {
     margin-bottom: 10px;
 }
 
-/* Estilos do Artigo Interativo (Expansível) */
+/* ==========================================
+   ARTIGO INTERATIVO (EXPANSÍVEL)
+   ========================================== */
 .artigo p {
     margin-bottom: 15px;
     text-align: justify;
@@ -167,9 +169,30 @@ button:hover {
     margin-left: 20px;
 }
 
+/* ==========================================
+   RODAPÉ
+   ========================================== */
 footer {
     text-align: center;
     margin-top: 40px;
     color: #718096;
     font-size: 0.9rem;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================== */
+@media (max-width: 600px) {
+    header.header-container {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .logo-img {
+        max-width: 90px;
+    }
+
+    .header-texto h1 {
+        font-size: 1.4rem;
+    }
 }
