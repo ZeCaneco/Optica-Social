@@ -40,28 +40,35 @@
 
         <section class="card">
             <h2>Anatomia do Olho Humano</h2>
-            <p>Clique nas partes do olho abaixo para ver a definição e a função de cada estrutura:</p>
+            <p>Clique nas estruturas oculares abaixo para ver a definição e sua função visual:</p>
 
-            <div class="anatomia-container">
-                <img src="https://clinicaroisman.com.br/wp-content/uploads/2023/05/Peca-2-Otimizacoes-Partes-do-Olho-1024x536.webp" alt="Anatomia do Olho Humano" class="imagem-olho">
-
-                <div class="botoes-anatomia">
-                    <button onclick="mostrarAnatomia('cornea')">Córnea</button>
-                    <button onclick="mostrarAnatomia('iris')">Íris & Pupila</button>
-                    <button onclick="mostrarAnatomia('cristalino')">Cristalino</button>
-                    <button onclick="mostrarAnatomia('retina')">Retina</button>
-                    <button onclick="mostrarAnatomia('macula')">Mácula</button>
-                    <button onclick="mostrarAnatomia('esclera')">Esclera</button>
-                    <button onclick="mostrarAnatomia('coroide')">Coróide</button>
-                    <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
-                    <button onclick="mostrarAnatomia('vitreo')">Humor Vítreo</button>
-                </div>
+            <div class="botoes-lentes">
+                <button onclick="mostrarAnatomia('cornea')">Córnea</button>
+                <button onclick="mostrarAnatomia('iris')">Íris & Pupila</button>
+                <button onclick="mostrarAnatomia('cristalino')">Cristalino</button>
+                <button onclick="mostrarAnatomia('retina')">Retina</button>
+                <button onclick="mostrarAnatomia('macula')">Mácula</button>
+                <button onclick="mostrarAnatomia('esclera')">Esclera</button>
+                <button onclick="mostrarAnatomia('coroide')">Coróide</button>
+                <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
+                <button onclick="mostrarAnatomia('vitreo')">Humor Vítreo</button>
             </div>
 
             <div id="info-anatomia" class="visao-box">
-                <h3>Selecione uma parte do olho</h3>
-                <p>Clique em uma das opções acima para visualizar detalhes sobre sua definição e função no sistema visual.</p>
+                <h3>Selecione uma estrutura acima</h3>
+                <p>Clique em um dos botões para visualizar detalhes sobre a definição e função de cada parte do olho.</p>
             </div>
+        </section>
+
+        <section class="card artigo">
+            <h2>Artigo: A Luz e Sua Importância</h2>
+            <p>A luz sempre fascinou a humanidade e impulsionou descobertas científicas fundamentais para o avanço da sociedade.</p>
+            
+            <div id="conteudo-escondido" class="conteudo-escondido">
+                <p>Desde as primeiras teorias até a física quântica moderna, o entendimento sobre a refração, reflexão e natureza da luz permitiu a criação de lentes de correção visual, telescópios e tecnologias médicas avançadas.</p>
+            </div>
+
+            <button id="btn-ler-mais" onclick="alternarLeitura()">Ler mais</button>
         </section>
     </main>
 

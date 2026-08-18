@@ -104,3 +104,16 @@ function mostrarAnatomia(parte) {
         `;
     }
 }
+
+function alternarLeitura() {
+    const conteudo = document.getElementById('conteudo-escondido');
+    const btn = document.getElementById('btn-ler-mais');
+
+    if (conteudo.style.display === 'block') {
+        conteudo.style.display = 'none';
+        btn.textContent = 'Ler mais';
+    } else {
+        conteudo.style.display = 'block';
+        btn.textContent = 'Ler menos';
+    }
+}
