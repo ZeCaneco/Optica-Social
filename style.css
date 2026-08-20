@@ -29,44 +29,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    margin-bottom: 8px;
+    gap: 16px;
 }
 
-/* ENVÓLUCRO OVAL / CIRCULAR DA LOGO */
+/* MOLDURA CIRCULAR DA LOGO */
 .logo-circle-wrapper {
-    width: 42px;
-    height: 42px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #d0e1d4;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 3px solid #d0e1d4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     flex-shrink: 0;
 }
 
-/* LOGO BEM PEQUENA DENTRO DO SHAPE CIRCULAR */
+/* IMAGEM DA LOGO DENTRO DO CIRCULO */
 .logo-header {
-    width: 28px;
-    height: 28px;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 .header-centralizado h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin: 0;
     color: #ffffff;
     line-height: 1;
-}
-
-.header-centralizado p {
-    font-size: 1rem;
-    color: #d0e1d4;
-    max-width: 800px;
-    margin-top: 6px;
 }
 
 /* CONTAINER PRINCIPAL */
