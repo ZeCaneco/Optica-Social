@@ -1,81 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Óptica-Visual</title>
-    <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Óptica Social & História da Luz</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <header class="header-container">
-            <div class="logo-area">
-                <img src="logo.png" alt="Logo Óptica Social" class="logo-img">
-            </div>
-            <div class="header-texto">
-                <h1>Óptica-Visual</h1>
-                <p>A evolução científica da luz e suas aplicações práticas na sociedade.</p>
-            </div>
-        </header>
 
-        <section class="card">
-            <h2>Evolução Histórica: A Natureza da Luz</h2>
-            <p>Clique em um cientista ou período para descobrir sua teoria sobre a luz:</p>
-            
-            <div class="botoes-lentes">
-                <button onclick="mostrarHistoria('antiguidade')">Antiguidade</button>
-                <button onclick="mostrarHistoria('huygens')">Huygens</button>
-                <button onclick="mostrarHistoria('newton')">Newton</button>
-                <button onclick="mostrarHistoria('young')">Young</button>
-                <button onclick="mostrarHistoria('maxwell')">Maxwell</button>
-                <button onclick="mostrarHistoria('einstein')">Einstein</button>
-                <button onclick="mostrarHistoria('debroglie')">De Broglie</button>
-            </div>
 
-            <div id="visao-box" class="visao-box">
-                <h3>Selecione um período acima</h3>
-                <p>Clique nos botões da linha do tempo para explorar a evolução histórica da física óptica!</p>
-            </div>
-        </section>
+   <header>
+       <h1>Óptica Social & História da Luz</h1>
+       <p>A evolução científica da luz e suas aplicações práticas na sociedade.</p>
+   </header>
 
-        <section class="card">
-            <h2>Anatomia do Olho Humano</h2>
-            <p>Clique nas estruturas oculares abaixo para ver a definição e sua função visual:</p>
 
-            <div class="botoes-lentes">
-                <button onclick="mostrarAnatomia('cornea')">Córnea</button>
-                <button onclick="mostrarAnatomia('iris')">Íris & Pupila</button>
-                <button onclick="mostrarAnatomia('cristalino')">Cristalino</button>
-                <button onclick="mostrarAnatomia('retina')">Retina</button>
-                <button onclick="mostrarAnatomia('macula')">Mácula</button>
-                <button onclick="mostrarAnatomia('esclera')">Esclera</button>
-                <button onclick="mostrarAnatomia('coroide')">Coróide</button>
-                <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
-                <button onclick="mostrarAnatomia('vitreo')">Humor Vítreo</button>
-            </div>
+   <main>
+       <section class="card interativo">
+           <h2>Evolução Histórica: A Natureza da Luz</h2>
+           <p>Clique em um cientista ou período para descobrir sua teoria sobre a luz:</p>
 
-            <div id="info-anatomia" class="visao-box">
-                <h3>Selecione uma estrutura acima</h3>
-                <p>Clique em um dos botões para visualizar detalhes sobre a definição e função de cada parte do olho.</p>
-            </div>
-        </section>
 
-        <section class="card artigo">
-            <h2>Artigo: A Luz e Sua Importância</h2>
-            <p>A luz sempre fascinou a humanidade e impulsionou descobertas científicas fundamentais para o avanço da sociedade.</p>
-            
-            <div id="conteudo-escondido" class="conteudo-escondido">
-                <p>Desde as primeiras teorias até a física quântica moderna, o entendimento sobre a refração, reflexão e natureza da luz permitiu a criação de lentes de correção visual, telescópios e tecnologias médicas avançadas.</p>
-            </div>
+           <div class="botoes-lentes">
+               <button onclick="mostrarTeoria('antiguidade')">🏛️ Antiguidade</button>
+               <button onclick="mostrarTeoria('huygens')">🌊 Huygens</button>
+               <button onclick="mostrarTeoria('newton')">🌈 Newton</button>
+               <button onclick="mostrarTeoria('young')">🔬 Young</button>
+               <button onclick="mostrarTeoria('maxwell')">⚡ Maxwell</button>
+               <button onclick="mostrarTeoria('einstein')">⚛️ Einstein</button>
+               <button onclick="mostrarTeoria('debroglie')">🔄 De Broglie</button>
+           </div>
 
-            <button id="btn-ler-mais" onclick="alternarLeitura()">Ler mais</button>
-        </section>
-    </main>
 
-    <footer>
-        <p>Óptica-Visual &copy; Projeto Educacional de Física e Sociedade</p>
-    </footer>
+           <div id="caixa-teoria" class="visao-box">
+               <h3 id="titulo-teoria">Selecione um período acima</h3>
+               <div id="conteudo-teoria">
+                   <p>Clique nos botões da linha do tempo para explorar a evolução histórica da física óptica!</p>
+               </div>
+           </div>
+       </section>
 
-    <script src="script.js"></script>
+
+       <section class="card artigo">
+           <h2>Artigo: A Luz e Sua Importância</h2>
+           <p>
+               A luz faz parte da nossa vida diariamente, nos permitindo enxergar o mundo ao nosso redor.
+               Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar.
+           </p>
+
+
+           <div id="mais-conteudo-artigo" class="conteudo-escondido">
+               <p>
+                   Além de seu comportamento como onda, ela também é formada por pequenas partículas chamadas fótons.
+                   Essa dupla característica ajuda a explicar fenômenos como a reflexão da luz em espelhos, a refração em lentes e a formação das cores.
+               </p>
+               <p>
+                   O estudo da luz trouxe grandes avanços para a ciência e tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades.
+               </p>
+               <div class="referencias">
+                   <h4>Referências Bibliográficas:</h4>
+                   <ul>
+                       <li>EISBERG, R.; RESNICK, R. <em>Física Quântica</em>. Rio de Janeiro: Campus.</li>
+                       <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Rio de Janeiro: LTC.</li>
+                       <li>HECHT, E. <em>Óptica</em>. 5. ed. São Paulo: Pearson.</li>
+                       <li>TIPLER, P. A.; MOSCA, G. <em>Física para Cientistas e Engenheiros</em>. Rio de Janeiro: LTC.</li>
+                   </ul>
+               </div>
+           </div>
+
+
+           <button id="btn-ler-mais" onclick="alternarArtigo()">📖 Ler artigo completo</button>
+       </section>
+
+
+       <section class="card interativo">
+           <h2>Explore por Contexto Social</h2>
+           <p>Clique em um contexto abaixo para ver a aplicação prática dos equipamentos e princípios ópticos:</p>
+         
+           <div class="botoes-lentes">
+               <button onclick="mudarContexto('residencial')">🏠 Residencial</button>
+               <button onclick="mudarContexto('comercial')">🏢 Comercial</button>
+               <button onclick="mudarContexto('escolar')">🏫 Escolar</button>
+               <button onclick="mudarContexto('industrial')">🏭 Industrial</button>
+           </div>
+
+
+           <div id="caixa-visao" class="visao-box">
+               <h3 id="titulo-contexto">Selecione um contexto acima</h3>
+               <div id="conteudo-contexto">
+                   <p>Clique em um dos botões para explorar os equipamentos e princípios físicos envolvidos.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <section class="card interativo">
+           <h2>👁️ Anatomia do Olho & Física da Visão</h2>
+           <p>Explore as descobertas da pesquisa sobre o funcionamento biológico e físico do olho:</p>
+
+
+           <div class="botoes-lentes">
+               <button onclick="mostrarAnatomia('olho')">👁️ Anatomia do Olho</button>
+               <button onclick="mostrarAnatomia('imagem')">📸 Formação da Imagem</button>
+               <button onclick="mostrarAnatomia('espectro')">🌈 Espectro & Cores</button>
+               <button onclick="mostrarAnatomia('fenomenos')">🔍 Reflexão & Refração</button>
+           </div>
+
+
+           <div class="visao-box">
+               <h3 id="titulo-anatomia">Selecione um tópico acima</h3>
+               <div id="conteudo-anatomia">
+                   <p>Descubra como a estrutura ocular e a física da luz se combinam para gerar a visão.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <section class="card interativo">
+           <h2>👓 Deficiência Visual e Correção Óptica</h2>
+           <p>Compreenda as patologias visuais e como o desvio dos raios luminosos permite corrigi-las:</p>
+
+
+           <div class="botoes-lentes">
+               <button onclick="mostrarDeficiencia('cegueira')">🚫 Cegueira / Baixa Visão</button>
+               <button onclick="mostrarDeficiencia('patologias')">🩺 Catarata, Glaucoma & Mácula</button>
+               <button onclick="mostrarDeficiencia('daltonismo')">🎨 Daltonismo</button>
+               <button onclick="mostrarDeficiencia('oculos')">👓 Lentes Convergentes & Divergentes</button>
+           </div>
+
+
+           <div class="visao-box">
+               <h3 id="titulo-deficiencia">Selecione uma opção acima</h3>
+               <div id="conteudo-deficiencia">
+                   <p>Explore como os princípios ópticos corrigem e auxiliam problemas visuais.</p>
+               </div>
+           </div>
+       </section>
+
+
+       <section class="card interativo">
+           <h2>🤖 Tecnologias Assistivas e Inteligência Artificial</h2>
+           <p>Conheça as inovações que transformam a acessibilidade para pessoas com deficiência visual:</p>
+
+
+           <div class="botoes-lentes">
+               <button onclick="mostrarAssistiva('ia')">🤖 Visão Computacional / IA</button>
+               <button onclick="mostrarAssistiva('assistivas')">🦯 Leitores, Braille & Óculos Smart</button>
+               <button onclick="mostrarAssistiva('desafios')">💡 Cães-Guia & Semáforos Sonoros</button>
+           </div>
+
+
+           <div class="visao-box">
+               <h3 id="titulo-assistiva">Selecione uma tecnologia acima</h3>
+               <div id="conteudo-assistiva">
+                   <p>Descubra o papel da IA e da engenharia na acessibilidade cotidiana.</p>
+               </div>
+           </div>
+       </section>
+
+
+   </main>
+
+
+   <footer>
+       <p>Projeto Educativo sobre Óptica e Tecnociência &copy; 2026</p>
+   </footer>
+
+
 </body>
 </html>

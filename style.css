@@ -1,181 +1,147 @@
-/* ==========================================
-   CONFIGURAÇÕES GLOBAIS
-   ========================================== */
+/* Configurações Globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body {
-    background-color: #f0f4f8;
-    color: #2d3748;
-    line-height: 1.6;
-    padding: 20px;
+   background-color: #f0f4f8;
+   color: #2d3748;
+   line-height: 1.6;
+   padding: 20px;
 }
+
+
+header {
+   text-align: center;
+   padding: 40px 20px;
+   background: linear-gradient(135deg, #1e3c72, #2a5298);
+   color: white;
+   border-radius: 12px;
+   margin-bottom: 20px;
+}
+
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
+   max-width: 850px;
+   margin: 0 auto;
 }
 
-/* ==========================================
-   CABEÇALHO COM LOGO
-   ========================================== */
-header.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px 20px;
-    background: #a137df;
-    color: #ffffff;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-    text-align: center;
-}
 
-.logo-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-img {
-    max-width: 120px;
-    height: auto;
-    border-radius: 50%;
-    background-color: #ffffff;
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.header-texto h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.header-texto p {
-    font-size: 1.1rem;
-    opacity: 0.95;
-}
-
-/* ==========================================
-   CARDS E SEÇÕES
-   ========================================== */
 .card {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+   background: white;
+   padding: 25px;
+   margin-bottom: 25px;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
+
 
 .card h2 {
-    color: #a137df;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 8px;
+   color: #1e3c72;
+   margin-bottom: 15px;
+   border-bottom: 2px solid #e2e8f0;
+   padding-bottom: 8px;
 }
 
-/* ==========================================
-   ÁREA INTERATIVA & BOTÕES
-   ========================================== */
+
+/* Área Interativa dos Botões */
 .botoes-lentes {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+   display: flex;
+   gap: 8px;
+   margin-bottom: 20px;
+   flex-wrap: wrap;
 }
+
 
 button {
-    flex: 1;
-    min-width: 130px;
-    padding: 12px 16px;
-    border: none;
-    background-color: #a137df;
-    color: #ffffff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
+   flex: 1;
+   min-width: 120px;
+   padding: 10px 14px;
+   border: none;
+   background-color: #1e3c72;
+   color: white;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: all 0.3s ease;
 }
+
 
 button:hover {
-    background-color: #8327b8;
-    transform: translateY(-2px);
+   background-color: #2a5298;
+   transform: translateY(-2px);
 }
+
 
 .visao-box {
-    padding: 25px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    background-color: #fbf8ff;
-    min-height: 140px;
-    transition: all 0.3s ease;
+   padding: 25px;
+   border: 2px solid #cbd5e0;
+   border-radius: 8px;
+   background-color: #ffffff;
+   min-height: 140px;
+   transition: all 0.3s ease;
 }
+
 
 .visao-box h3 {
-    margin-bottom: 10px;
-    color: #a137df;
+   margin-bottom: 10px;
+   color: #1e3c72;
 }
 
-.visao-box p {
-    margin-bottom: 10px;
+
+.visao-box ul {
+   margin-left: 20px;
+   margin-top: 8px;
 }
 
-/* ==========================================
-   ARTIGO INTERATIVO (EXPANSÍVEL)
-   ========================================== */
+
+/* Estilos do Artigo Interativo (Expansível) */
 .artigo p {
-    margin-bottom: 15px;
-    text-align: justify;
+   margin-bottom: 15px;
+   text-align: justify;
 }
+
 
 .conteudo-escondido {
-    display: none;
-    animation: fadeIn 0.5s ease-in-out;
+   display: none;
+   animation: fadeIn 0.5s ease-in-out;
 }
+
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+   from { opacity: 0; transform: translateY(-5px); }
+   to { opacity: 1; transform: translateY(0); }
 }
+
 
 #btn-ler-mais {
-    margin-top: 10px;
-    background-color: #a137df;
-    color: #ffffff;
-    width: auto;
+   margin-top: 10px;
+   background-color: #2b6cb0;
+   width: auto;
 }
 
-/* ==========================================
-   RODAPÉ
-   ========================================== */
+
+.referencias {
+   margin-top: 20px;
+   padding: 15px;
+   background-color: #edf2f7;
+   border-radius: 6px;
+   font-size: 0.9rem;
+}
+
+
+.referencias ul {
+   margin-left: 20px;
+}
+
+
 footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #718096;
-    font-size: 0.9rem;
-}
-
-/* ==========================================
-   RESPONSIVIDADE (CELULARES)
-   ========================================== */
-@media (max-width: 600px) {
-    header.header-container {
-        flex-direction: column;
-        padding: 20px 15px;
-    }
-
-    .logo-img {
-        max-width: 90px;
-    }
-
-    .header-texto h1 {
-        font-size: 1.5rem;
-    }
+   text-align: center;
+   margin-top: 40px;
+   color: #718096;
+   font-size: 0.9rem;
 }
