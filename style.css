@@ -16,7 +16,7 @@ body {
 .header-centralizado {
     background-color: #0d2b45;
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -24,21 +24,31 @@ body {
     justify-content: center;
 }
 
+/* CONTAINER PARA A LOGO E O TÍTULO LADO A LADO */
+.logo-titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
 .logo-header {
-    max-width: 220px;
-    height: auto;
-    margin-bottom: 20px;
+    height: 45px; /* Tamanho reduzido e proporcional */
+    width: auto;
 }
 
 .header-centralizado h1 {
     font-size: 2.2rem;
-    margin-bottom: 10px;
+    margin: 0;
+    color: #ffffff;
 }
 
 .header-centralizado p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #d0e1d4;
     max-width: 800px;
+    margin-top: 5px;
 }
 
 /* CONTAINER PRINCIPAL */
