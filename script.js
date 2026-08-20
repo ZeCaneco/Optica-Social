@@ -198,9 +198,7 @@ function mostrarAnatomia(chave) {
 
   if (anatomiaVisao[chave]) {
     titulo.textContent = anatomiaVisao[chave].titulo;
-    conteudo.innerHTML = anatomiaVisao[chave].texto.includes('<p>') || anatomiaVisao[chave].texto.includes('<ul>') 
-      ? anatomiaVisao[chave].texto 
-      : `<p>${anatomiaVisao[chave].texto}</p>`;
+    conteudo.innerHTML = anatomiaVisao[chave].texto;
   }
 }
 
@@ -210,9 +208,7 @@ function mostrarDeficiencia(chave) {
 
   if (deficienciasEGaleria[chave]) {
     titulo.textContent = deficienciasEGaleria[chave].titulo;
-    conteudo.innerHTML = deficienciasEGaleria[chave].texto.includes('<p>') || deficienciasEGaleria[chave].texto.includes('<ul>') 
-      ? deficienciasEGaleria[chave].texto 
-      : `<p>${deficienciasEGaleria[chave].texto}</p>`;
+    conteudo.innerHTML = deficienciasEGaleria[chave].texto;
   }
 }
 
@@ -222,8 +218,6 @@ function mostrarAssistiva(chave) {
 
   if (tecnologiasAssistivasIA[chave]) {
     titulo.textContent = tecnologiasAssistivasIA[chave].titulo;
-    conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto.includes('<p>') || tecnologiasAssistivasIA[chave].texto.includes('<ul>') 
-      ? tecnologiasAssistivasIA[chave].texto 
-      : `<p>${tecnologiasAssistivasIA[chave].texto}</p>`;
+    conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto;
   }
 }
