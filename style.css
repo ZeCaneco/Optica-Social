@@ -1,147 +1,134 @@
 /* Configurações Globais */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 body {
-   background-color: #f0f4f8;
-   color: #2d3748;
-   line-height: 1.6;
-   padding: 20px;
+    background-color: #f0f4f8;
+    color: #2d3748;
+    line-height: 1.6;
+    padding: 20px;
 }
-
 
 header {
-   text-align: center;
-   padding: 40px 20px;
-   background: linear-gradient(135deg, #1e3c72, #2a5298);
-   color: white;
-   border-radius: 12px;
-   margin-bottom: 20px;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
-
 
 main {
-   max-width: 850px;
-   margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
 
 .card {
-   background: white;
-   padding: 25px;
-   margin-bottom: 25px;
-   border-radius: 10px;
-   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-
 
 .card h2 {
-   color: #1e3c72;
-   margin-bottom: 15px;
-   border-bottom: 2px solid #e2e8f0;
-   padding-bottom: 8px;
+    color: #1e3c72;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
 }
-
 
 /* Área Interativa dos Botões */
 .botoes-lentes {
-   display: flex;
-   gap: 8px;
-   margin-bottom: 20px;
-   flex-wrap: wrap;
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
-
 
 button {
-   flex: 1;
-   min-width: 120px;
-   padding: 10px 14px;
-   border: none;
-   background-color: #1e3c72;
-   color: white;
-   border-radius: 6px;
-   cursor: pointer;
-   font-weight: bold;
-   transition: all 0.3s ease;
+    flex: 1;
+    min-width: 130px;
+    padding: 10px 14px;
+    border: none;
+    background-color: #1e3c72;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-
 
 button:hover {
-   background-color: #2a5298;
-   transform: translateY(-2px);
+    background-color: #2a5298;
+    transform: translateY(-2px);
 }
-
 
 .visao-box {
-   padding: 25px;
-   border: 2px solid #cbd5e0;
-   border-radius: 8px;
-   background-color: #ffffff;
-   min-height: 140px;
-   transition: all 0.3s ease;
+    padding: 25px;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    min-height: 140px;
+    transition: all 0.3s ease;
 }
-
 
 .visao-box h3 {
-   margin-bottom: 10px;
-   color: #1e3c72;
+    margin-bottom: 10px;
+    color: #1e3c72;
 }
-
 
 .visao-box ul {
-   margin-left: 20px;
-   margin-top: 8px;
+    margin-left: 20px;
+    margin-top: 8px;
 }
 
+.visao-box li {
+    margin-bottom: 6px;
+}
 
 /* Estilos do Artigo Interativo (Expansível) */
 .artigo p {
-   margin-bottom: 15px;
-   text-align: justify;
+    margin-bottom: 15px;
+    text-align: justify;
 }
-
 
 .conteudo-escondido {
-   display: none;
-   animation: fadeIn 0.5s ease-in-out;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
 }
-
 
 @keyframes fadeIn {
-   from { opacity: 0; transform: translateY(-5px); }
-   to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
 
 #btn-ler-mais {
-   margin-top: 10px;
-   background-color: #2b6cb0;
-   width: auto;
+    margin-top: 10px;
+    background-color: #2b6cb0;
+    width: auto;
 }
-
 
 .referencias {
-   margin-top: 20px;
-   padding: 15px;
-   background-color: #edf2f7;
-   border-radius: 6px;
-   font-size: 0.9rem;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #edf2f7;
+    border-radius: 6px;
+    font-size: 0.9rem;
 }
-
 
 .referencias ul {
-   margin-left: 20px;
+    margin-left: 20px;
 }
 
-
 footer {
-   text-align: center;
-   margin-top: 40px;
-   color: #718096;
-   font-size: 0.9rem;
+    text-align: center;
+    margin-top: 40px;
+    color: #718096;
+    font-size: 0.9rem;
 }
