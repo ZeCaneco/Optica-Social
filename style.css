@@ -32,26 +32,25 @@ body {
     gap: 16px;
 }
 
-/* MOLDURA CIRCULAR DA LOGO */
+/* RECORTADOR CIRCULAR DA LOGO */
 .logo-circle-wrapper {
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    background-color: #ffffff;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #d0e1d4;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     flex-shrink: 0;
 }
 
-/* IMAGEM DA LOGO DENTRO DO CIRCULO */
+/* IMAGEM CORTADA EM FORMATO CIRCULAR PREENCHENDO O ESPAÇO */
 .logo-header {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
