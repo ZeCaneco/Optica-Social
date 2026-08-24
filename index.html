@@ -34,7 +34,7 @@
                 <button onclick="mostrarTeoria('debroglie')">De Broglie</button>
             </div>
 
-            <div class="visao-box">
+            <div id="caixa-teoria" class="visao-box">
                 <h3 id="titulo-teoria">Selecione um período acima</h3>
                 <div id="conteudo-teoria">
                     <p>Clique nos botões da linha do tempo para explorar a evolução histórica da física óptica!</p>
@@ -47,7 +47,7 @@
             <h2>Artigo: A Luz e Sua Importância Tecnocientífica</h2>
             <p>
                 A luz faz parte da nossa vida diariamente, nos permitindo enxergar e observar o mundo ao nosso redor.
-                Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar.
+                Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar, podendo se deslocar até mesmo no vácuo.
             </p>
 
             <div id="mais-conteudo-artigo" class="conteudo-escondido" style="display: none;">
@@ -56,7 +56,7 @@
                     Essa dupla característica (dualidade onda-partícula) ajuda a explicar fenômenos como a reflexão da luz em espelhos, a refração em lentes e a formação das cores.
                 </p>
                 <p>
-                    O estudo da luz trouxe grandes avanços para a ciência e a tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades.
+                    O estudo da luz trouxe grandes avanços para a ciência e a tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades. Além disso, a luz é essencial para a fotossíntese, processo que garante a manutenção da vida na Terra.
                 </p>
                 <div class="referencias">
                     <h4>Referências Bibliográficas:</h4>
@@ -84,7 +84,7 @@
                 <button onclick="mudarContexto('industrial')">Industrial</button>
             </div>
 
-            <div class="visao-box">
+            <div id="caixa-visao" class="visao-box">
                 <h3 id="titulo-contexto">Selecione um contexto acima</h3>
                 <div id="conteudo-contexto">
                     <p>Clique em um dos botões para explorar os equipamentos e princípios físicos envolvidos.</p>
@@ -92,18 +92,18 @@
             </div>
         </section>
 
-        <!-- 4. ANATOMIA E FÍSICA DA VISÃO -->
+        <!-- 4. ANATOMIA E FÍSICA DA VISÃO (COMO ENXERGAMOS / FÍSICA E A VISÃO) -->
         <section class="card interativo">
-            <h2>Anatomia do Olho e Física da Visão</h2>
+            <h2>Como Enxergamos: Anatomia do Olho e Física da Visão</h2>
             <p>Explore o funcionamento biológico do olho e o comportamento físico dos raios luminosos:</p>
 
             <div class="botoes-lentes">
-                <button onclick="mostrarAnatomia('oque_e_luz')">O que é Luz</button>
                 <button onclick="mostrarAnatomia('como_luz_entra')">Como a Luz Entra no Olho</button>
-                <button onclick="mostrarAnatomia('olho')">Anatomia Ocular</button>
+                <button onclick="mostrarAnatomia('oque_e_luz')">O que é Luz?</button>
+                <button onclick="mostrarAnatomia('olho')">Anatomia do Olho</button>
                 <button onclick="mostrarAnatomia('imagem')">Formação da Imagem</button>
                 <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
-                <button onclick="mostrarAnatomia('espectro')">Espectro Visível</button>
+                <button onclick="mostrarAnatomia('espectro')">Espectro e Luz Visível</button>
                 <button onclick="mostrarAnatomia('fenomenos')">Reflexão e Refração</button>
                 <button onclick="mostrarAnatomia('cores')">Formação das Cores</button>
             </div>
@@ -116,19 +116,19 @@
             </div>
         </section>
 
-        <!-- 5. DEFICIÊNCIAS E LENTES CORRETIVAS -->
+        <!-- 5. COMO FUNCIONAM OS ÓCULOS E DEFICIÊNCIAS -->
         <section class="card interativo">
-            <h2>Deficiências Visuais e Erros de Refração</h2>
-            <p>Compreenda os erros refrativos, patologias visuais e o funcionamento das lentes corretivas:</p>
+            <h2>Como Funcionam os Óculos e Deficiências Visuais</h2>
+            <p>Compreenda as alterações visuais e como as lentes desviam a luz para corrigi-las:</p>
 
             <div class="botoes-lentes">
                 <button onclick="mostrarDeficiencia('miopia')">Miopia</button>
                 <button onclick="mostrarDeficiencia('hipermetropia')">Hipermetropia</button>
                 <button onclick="mostrarDeficiencia('astigmatismo')">Astigmatismo</button>
                 <button onclick="mostrarDeficiencia('cegueira')">Cegueira e Baixa Visão</button>
-                <button onclick="mostrarDeficiencia('patologias')">Catarata e Glaucoma</button>
+                <button onclick="mostrarDeficiencia('patologias')">Catarata, Glaucoma e Mácula</button>
                 <button onclick="mostrarDeficiencia('daltonismo')">Daltonismo</button>
-                <button onclick="mostrarDeficiencia('oculos')">Lentes Corretivas</button>
+                <button onclick="mostrarDeficiencia('oculos')">Funcionamento das Lentes</button>
             </div>
 
             <div class="visao-box">
@@ -139,157 +139,24 @@
             </div>
         </section>
 
-        <!-- 6. TECNOLOGIAS ASSISTIVAS, IA E APLICATIVOS -->
+        <!-- 6. TECNOLOGIAS ASSISTIVAS E IA -->
         <section class="card interativo">
-            <h2>Tecnologias Assistivas, IA e Acessibilidade</h2>
-            <p>Conheça as tecnologias avançadas, óculos inteligentes e aplicativos no cotidiano:</p>
+            <h2>Tecnologias Assistivas e Inteligência Artificial</h2>
+            <p>Conheça as tecnologias avançadas e recursos de acessibilidade no cotidiano:</p>
 
             <div class="botoes-lentes">
                 <button onclick="mostrarAssistiva('oculos_inteligentes')">Óculos Inteligentes</button>
                 <button onclick="mostrarAssistiva('apps_acessibilidade')">Aplicativos de Acessibilidade</button>
-                <button onclick="mostrarAssistiva('ia')">Visão Computacional</button>
-                <button onclick="mostrarAssistiva('recursos_ia')">Recursos de IA (OCR)</button>
-                <button onclick="mostrarAssistiva('assistivas')">Leitores e Linhas Braille</button>
-                <button onclick="mostrarAssistiva('curiosidades')">Gestos no Celular</button>
+                <button onclick="mostrarAssistiva('ia')">Visão Computacional e IA</button>
+                <button onclick="mostrarAssistiva('recursos_ia')">Recursos Práticos de IA</button>
+                <button onclick="mostrarAssistiva('assistivas')">Guias e Dispositivos Assistivos</button>
+                <button onclick="mostrarAssistiva('curiosidades')">Gestos no Celular e Curiosidades</button>
             </div>
 
             <div class="visao-box">
                 <h3 id="titulo-assistiva">Selecione uma opção acima</h3>
                 <div id="conteudo-assistiva">
-                    <p>Descubra o papel da tecnologia e da inteligência artificial na acessibilidade.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. SAÚDE VISUAL E PREVENÇÃO -->
-        <section class="card interativo">
-            <h2>Saúde Visual e Prevenção</h2>
-            <p>Cuidados fundamentais com a saúde dos olhos:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarSaude('exames')">Exames Regulares</button>
-                <button onclick="mostrarSaude('protecao')">Proteção UV</button>
-                <button onclick="mostrarSaude('habitos')">Hábitos Saudáveis</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-saude">Selecione um tópico acima</h3>
-                <div id="conteudo-saude">
-                    <p>Descubra como prevenir doenças oculares e manter a saúde visual.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. IMPACTO SOCIOECONÔMICO -->
-        <section class="card interativo">
-            <h2>Impacto Socioeconômico do Acesso à Óptica</h2>
-            <p>A importância da visão no desenvolvimento humano:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarSocio('rendimento')">Rendimento Escolar</button>
-                <button onclick="mostrarSocio('trabalho')">Mercado de Trabalho</button>
-                <button onclick="mostrarSocio('desigualdade')">Redução de Desigualdades</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-socio">Selecione um tópico acima</h3>
-                <div id="conteudo-socio">
-                    <p>Veja como o acesso a óculos impacta a sociedade e a economia.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. ILUMINAÇÃO E ERGONOMIA -->
-        <section class="card interativo">
-            <h2>Iluminação, Ergonomia e Fadiga Visual</h2>
-            <p>Como o ambiente afeta a saúde dos seus olhos:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarErgonomia('telas')">Uso de Telas</button>
-                <button onclick="mostrarErgonomia('iluminacao')">Iluminação Adequada</button>
-                <button onclick="mostrarErgonomia('pausas')">Regra das Pausas</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-ergonomia">Selecione um tópico acima</h3>
-                <div id="conteudo-ergonomia">
-                    <p>Aprenda a evitar a fadiga visual e ajustar seu ambiente de trabalho.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. INCLUSÃO ESCOLAR E NO TRABALHO -->
-        <section class="card interativo">
-            <h2>Inclusão Escolar e Profissional</h2>
-            <p>Acessibilidade em ambientes educacionais e de trabalho:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarInclusao('escolas')">Adaptação Escolar</button>
-                <button onclick="mostrarInclusao('empresas')">Acessibilidade nas Empresas</button>
-                <button onclick="mostrarInclusao('materiais')">Materiais Adaptados</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-inclusao">Selecione um tópico acima</h3>
-                <div id="conteudo-inclusao">
-                    <p>Descubra como promover a equidade e a inclusão para pessoas com baixa visão.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 12. AVANÇOS BIOMÉDICOS E PRÓTESES -->
-        <section class="card interativo">
-            <h2>Avanços Biomédicos e Próteses Oculares</h2>
-            <p>O futuro da medicina regenerativa e tecnológica:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarBiomedica('retina_artificial')">Retina Artificial</button>
-                <button onclick="mostrarBiomedica('chips')">Implantes Biônicos</button>
-                <button onclick="mostrarBiomedica('terapia_genica')">Terapias Genéticas</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-biomedica">Selecione um tópico acima</h3>
-                <div id="conteudo-biomedica">
-                    <p>Explore as tecnologias médicas inovadoras para a recuperação da visão.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 13. FUTURO DA ÓPTICA SOCIAL -->
-        <section class="card interativo">
-            <h2>O Futuro da Óptica Social e Inovação</h2>
-            <p>Novas tecnologias democratizando o acesso visual:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarFuturo('exames_portateis')">Exames Portáteis</button>
-                <button onclick="mostrarFuturo('impressao_3d')">Impressão 3D de Lentes</button>
-                <button onclick="mostrarFuturo('baixo_custo')">Tecnologias Acessíveis</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-futuro">Selecione um tópico acima</h3>
-                <div id="conteudo-futuro">
-                    <p>Conheça as inovações que barateiam e expandem o atendimento óptico mundial.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 14. POLÍTICAS PÚBLICAS E ACESSO -->
-        <section class="card interativo">
-            <h2>Políticas Públicas e Programas de Visão</h2>
-            <p>Ações governamentais e comunitárias para a saúde ocular:</p>
-
-            <div class="botoes-lentes">
-                <button onclick="mostrarPoliticas('triagem')">Triagem nas Escolas</button>
-                <button onclick="mostrarPoliticas('doacao')">Programas de Doação</button>
-                <button onclick="mostrarPoliticas('sus')">Atendimento no SUS</button>
-            </div>
-
-            <div class="visao-box">
-                <h3 id="titulo-politicas">Selecione um tópico acima</h3>
-                <div id="conteudo-politicas">
-                    <p>Entenda o papel das políticas públicas na democratização da saúde visual.</p>
+                    <p>Descubra o papel da tecnologia, da inteligência artificial e da acessibilidade na vida prática.</p>
                 </div>
             </div>
         </section>

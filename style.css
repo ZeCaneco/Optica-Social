@@ -1,149 +1,181 @@
+/* RESET BÁSICO E CONFIGURAÇÕES GERAIS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+   background-color: #f4f7f6;
+   color: #333;
+   line-height: 1.6;
 }
 
+
+/* CABEÇALHO CENTRALIZADO */
 .header-centralizado {
-    background-color: #0d2b45;
-    color: #ffffff;
-    padding: 25px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   background-color: #0d2b45;
+   color: #ffffff;
+   padding: 25px 20px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
+
+/* CONTAINER PARA A LOGO E O TÍTULO LADO A LADO */
 .logo-titulo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
 }
 
+
+/* RECORTADOR CIRCULAR DA LOGO */
 .logo-circle-wrapper {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid #ffffff;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+   flex-shrink: 0;
 }
 
+
+/* IMAGEM CORTADA EM FORMATO CIRCULAR PREENCHENDO O ESPAÇO */
 .logo-header {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
 }
+
 
 .header-centralizado h1 {
-    font-size: 2.3rem;
-    margin: 0;
-    color: #ffffff;
-    line-height: 1;
+   font-size: 2.3rem;
+   margin: 0;
+   color: #ffffff;
+   line-height: 1;
 }
 
+
+/* CONTAINER PRINCIPAL */
 main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
+   max-width: 1000px;
+   margin: 30px auto;
+   padding: 0 20px;
 }
 
+
+/* CARDS */
 .card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+   background: #ffffff;
+   border-radius: 10px;
+   padding: 25px;
+   margin-bottom: 25px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+
 
 .card h2 {
-    color: #0d2b45;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #203c56;
-    padding-bottom: 5px;
+   color: #0d2b45;
+   margin-bottom: 10px;
+   border-bottom: 2px solid #203c56;
+   padding-bottom: 5px;
 }
+
 
 .card p {
-    margin-bottom: 15px;
+   margin-bottom: 15px;
 }
 
+
+/* BOTÕES DE NAVEGAÇÃO / INTERATIVOS */
 .botoes-lentes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin: 15px 0;
 }
+
 
 .botoes-lentes button, #btn-ler-mais {
-    background-color: #203c56;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: background 0.3s ease;
+   background-color: #203c56;
+   color: white;
+   border: none;
+   padding: 10px 18px;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 0.95rem;
+   transition: background 0.3s ease;
 }
+
 
 .botoes-lentes button:hover, #btn-ler-mais:hover {
-    background-color: #544e61;
+   background-color: #544e61;
 }
 
+
+/* CAIXAS DE EXIBIÇÃO DE CONTEÚDO DENTRO DOS CARDS */
 .visao-box {
-    background-color: #eef4f8;
-    border-left: 5px solid #203c56;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 4px;
+   background-color: #eef4f8;
+   border-left: 5px solid #203c56;
+   padding: 20px;
+   margin-top: 15px;
+   border-radius: 4px;
 }
+
 
 .visao-box h3 {
-    color: #0d2b45;
-    margin-bottom: 10px;
+   color: #0d2b45;
+   margin-bottom: 10px;
 }
+
 
 .visao-box ul {
-    margin-left: 20px;
+   margin-left: 20px;
 }
+
 
 .visao-box li {
-    margin-bottom: 8px;
+   margin-bottom: 8px;
 }
 
+
+/* REFERÊNCIAS BIBLIOGRÁFICAS */
 .referencias {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ddd;
+   margin-top: 20px;
+   padding-top: 15px;
+   border-top: 1px solid #ddd;
 }
+
 
 .referencias h4 {
-    margin-bottom: 10px;
-    color: #0d2b45;
+   margin-bottom: 10px;
+   color: #0d2b45;
 }
+
 
 .referencias ul {
-    margin-left: 20px;
-    font-size: 0.9rem;
+   margin-left: 20px;
+   font-size: 0.9rem;
 }
 
+
+/* RODAPÉ */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0d2b45;
-    color: white;
-    margin-top: 40px;
+   text-align: center;
+   padding: 20px;
+   background-color: #0d2b45;
+   color: white;
+   margin-top: 40px;
 }
