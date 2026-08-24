@@ -68,6 +68,14 @@ const contextos = {
 
 // BANCO DE DADOS 3: ANATOMIA E FÍSICA DA VISÃO
 const anatomiaVisao = {
+  oque_e_luz: {
+    titulo: "O que é Luz?",
+    texto: "A luz é uma forma de radiação eletromagnética visível ao olho humano. Ela se comporta simultaneamente como onda (propagando-se por meio de campos elétricos e magnéticos oscilantes) e como um feixe de partículas de energia chamadas fótons. É responsável por transmitir a informação visual através do espaço."
+  },
+  como_luz_entra: {
+    titulo: "Como a Luz Entra no Olho",
+    texto: "A luz vinda dos objetos incide primeiro sobre a <strong>córnea</strong> (primeira lente convergente do olho), passa pelo fluido transparente (humor aquoso) e atravessa a <strong>pupila</strong>, cujo diâmetro é controlado pela íris. Em seguida, atravessa o <strong>cristalino</strong>, que faz o ajuste fino do foco (acomodação visual), e cruza o humor vítreo até convergir exatamente sobre a <strong>retina</strong>."
+  },
   olho: {
     titulo: "Anatomia do Olho Humano",
     texto: "<p>O olho humano é composto por três camadas principais:</p>" +
@@ -102,6 +110,18 @@ const anatomiaVisao = {
 
 // BANCO DE DADOS 4: DEFICIÊNCIAS E CORREÇÃO ÓPTICA
 const deficienciasEGaleria = {
+  miopia: {
+    titulo: "Miopia",
+    texto: "Anomalia visual em que o globo ocular é mais longo que o normal ou a córnea tem curvatura excessiva. Como resultado, o ponto focal da imagem forma-se <strong>antes da retina</strong>, tornando os objetos distantes embaçados. É corrigida com <strong>lentes divergentes</strong> (côncavas)."
+  },
+  hipermetropia: {
+    titulo: "Hipermetropia",
+    texto: "Ocorre quando o globo ocular é mais curto que o normal ou a curvatura da córnea é insuficiente. A imagem focaliza-se <strong>atrás da retina</strong>, dificultando principalmente a visão de objetos próximos. É corrigida com <strong>lentes convergentes</strong> (convexas)."
+  },
+  astigmatismo: {
+    titulo: "Astigmatismo",
+    texto: "Causado por uma irregularidade na curvatura da córnea ou do cristalino, que apresentam formato ovalado (semelhante a uma bola de futebol americano) em vez de esférico. Isso faz com que os raios de luz focalizem em múltiplos pontos distintos, distorcendo a visão tanto de perto quanto de longe. É corrigido com <strong>lentes cilíndricas</strong>."
+  },
   cegueira: {
     titulo: "Cegueira e Baixa Visão",
     texto: "<p><strong>Cegueira:</strong> Interrupção total do percurso ou processamento do estímulo luminoso (por opacidade dos meios transparentes ou danos no nervo óptico/retina).</p>" +
@@ -120,16 +140,29 @@ const deficienciasEGaleria = {
     texto: "Disfunção ou ausência de tipos específicos de cones na retina (receptores de ondas curtas, médias ou longas), fazendo com que o cérebro confunda cores vizinhas, como o verde e o vermelho."
   },
   oculos: {
-    titulo: "Funcionamento das Lentes (Miopia e Hipermetropia)",
+    titulo: "Funcionamento das Lentes Corretivas",
     texto: "<ul>" +
              "<li><strong>Lentes Convergentes (Hipermetropia):</strong> Mais grossas no centro. Adiantam o ponto focal para que a imagem não se forme atrás da retina.</li>" +
              "<li><strong>Lentes Divergentes (Miopia):</strong> Mais grossas nas bordas. Afastam os raios para empurrar o ponto focal de volta para a retina.</li>" +
+             "<li><strong>Lentes Cilíndricas (Astigmatismo):</strong> Compensam as assimetrias na curvatura focal da córnea.</li>" +
            "</ul>"
   }
 };
 
 // BANCO DE DADOS 5: TECNOLOGIAS ASSISTIVAS E IA
 const tecnologiasAssistivasIA = {
+  oculos_inteligentes: {
+    titulo: "Óculos Inteligentes (Smart Glasses)",
+    texto: "Dispositivos equipados com microcâmeras, sensores ópticos e inteligência artificial acoplados às hastes. Eles capturam o ambiente em tempo real, reconhecem textos, rostos e obstáculos, e transmitem as informações em áudio diretamente ao ouvido do usuário via condução óssea ou alto-falantes integrados (exemplo: OrCam MyEye)."
+  },
+  apps_acessibilidade: {
+    titulo: "Aplicativos de Acessibilidade Visual",
+    texto: "<ul>" +
+             "<li><strong>Be My Eyes:</strong> Conecta pessoas cegas a voluntários ou IA para áudio-descrição instantânea do ambiente.</li>" +
+             "<li><strong>Seeing AI:</strong> Aplicativo da Microsoft que utiliza a câmera para ler documentos, reconhecer produtos por código de barras, descrever cenas e identificar pessoas.</li>" +
+             "<li><strong>Lookout:</strong> Ferramenta do Google que auxilia na leitura de rótulos, cédulas de dinheiro e texto impresso em tempo real.</li>" +
+           "</ul>"
+  },
   ia: {
     titulo: "Visão Computacional e Inteligência Artificial",
     texto: "A Visão Computacional ensina sistemas a interpretarem padrões de luz, cores e formas. Câmeras capturam o ambiente e a IA traduz as imagens instantaneamente em respostas de áudio para o usuário."
@@ -148,12 +181,44 @@ const tecnologiasAssistivasIA = {
     texto: "<ul>" +
              "<li><strong>Leitores de Tela:</strong> Softwares como NVDA, JAWS, VoiceOver e TalkBack convertem conteúdo em fala.</li>" +
              "<li><strong>Linhas e Impressoras Braille:</strong> Dispositivos eletromecânicos que projetam ou estampam pinos táticos.</li>" +
-             "<li><strong>Lupas Eletrônicas e Óculos Smart:</strong> Aparelhos como OrCam MyEye com microcâmera e áudio integrado.</li>" +
+             "<li><strong>Lupas Eletrônicas e Óculos Smart:</strong> Aparelhos com microcâmera e áudio integrado para ampliação ou conversão de texto.</li>" +
            "</ul>"
   },
   curiosidades: {
     titulo: "Curiosidades e Acessibilidade no Celular",
     texto: "Pessoas cegas usam smartphones de tela sensível ao toque através de exploração tátil e varredura por gestos (ex: duplo toque para ativar), ouvindo a síntese de áudio em frequências muito aceleradas adaptadas ao cérebro."
+  }
+};
+
+// BANCO DE DADOS 6: TÓPICOS COMPLEMENTARES
+const complementares = {
+  topico7: {
+    titulo: "Tópico 7: Saúde Visual e Prevenção",
+    texto: "Exames oftalmológicos regulares são essenciais para diagnosticar precocemente doenças assintomáticas, como o glaucoma e a degeneração macular. Medidas preventivas incluem uso de protetores oculares em atividades de risco e proteção contra radiação UV."
+  },
+  topico8: {
+    titulo: "Tópico 8: Impacto Socioeconômico do Acesso à Óptica",
+    texto: "A falta de correção visual afeta diretamente o rendimento escolar de crianças e a produtividade no mercado de trabalho. O acesso universal a exames e óculos reduz a desigualdade social e potencializa o desenvolvimento econômico."
+  },
+  topico9: {
+    titulo: "Tópico 9: Iluminação, Ergonomia e Fadiga Visual",
+    texto: "Ambientes com iluminação inadequada ou uso prolongado de telas sem pausas causam a Síndrome da Visão do Computador (fadiga, ressecamento ocular e dores de cabeça). O uso de luzes com temperatura de cor adequada e a regra de pausas periódicas protegem a saúde ocular."
+  },
+  topico10: {
+    titulo: "Tópico 10: Inclusão Escolar e no Ambiente de Trabalho",
+    texto: "Garantir acessibilidade visual nas escolas e corporações exige a adaptação de materiais em Braille, fontes ampliadas, softwares leitores de tela e iluminação adequada para garantir a autonomia e equidade de oportunidades."
+  },
+  topico12: {
+    titulo: "Tópico 12: Avanços Biomédicos e Próteses Oculares",
+    texto: "O desenvolvimento de retinas artificiais e implantes de chips biônicos visa restaurar parcialmente a percepção luminosa em pacientes com cegueira profunda, integrando eletrodos diretamente ao nervo óptico."
+  },
+  topico13: {
+    titulo: "Tópico 13: O Futuro da Óptica Social e Inovação",
+    texto: "Dispositivos portáteis de baixo custo para exames de refração e produção automatizada de lentes em impressoras 3D prometem democratizar o acesso à correção visual em regiões isoladas ou de vulnerabilidade social."
+  },
+  topico14: {
+    titulo: "Tópico 14: Políticas Públicas e Programas de Visão",
+    texto: "Iniciativas governamentais e de ONGs para distribuição gratuita de óculos e triagens visuais nas redes públicas de ensino são fundamentais para combater a evasão escolar e promover a saúde pública."
   }
 };
 
@@ -219,5 +284,15 @@ function mostrarAssistiva(chave) {
   if (tecnologiasAssistivasIA[chave]) {
     titulo.textContent = tecnologiasAssistivasIA[chave].titulo;
     conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto;
+  }
+}
+
+function mostrarComplementar(chave) {
+  const titulo = document.getElementById('titulo-complementar');
+  const conteudo = document.getElementById('conteudo-complementar');
+
+  if (complementares[chave]) {
+    titulo.textContent = complementares[chave].titulo;
+    conteudo.innerHTML = `<p>${complementares[chave].texto}</p>`;
   }
 }
