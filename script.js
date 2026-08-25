@@ -66,7 +66,7 @@ const contextos = {
   }
 };
 
-// BANCO DE DADOS 3: ANATOMIA E FÍSICA DA VISÃO (COMO ENXERGAMOS / FÍSICA E A VISÃO)
+// BANCO DE DADOS 3: ANATOMIA E FÍSICA DA VISÃO
 const anatomiaVisao = {
   como_luz_entra: {
     titulo: "Como a Luz Entra no Olho",
@@ -185,6 +185,30 @@ const tecnologiasAssistivasIA = {
   }
 };
 
+// BANCO DE DADOS 6: FÍSICA E O SOM
+const fisicaEosom = {
+  ecolocalizacao: {
+    titulo: "Ecolocalização",
+    texto: "<p><strong>Princípio:</strong> Reflexão de ondas (eco) e Efeito Doppler.</p>" +
+           "<p><strong>Aplicação:</strong> Mapeamento espacial por morcegos, cetáceos e pessoas cegas (via estalos de língua), calculando a distância pelo tempo de retorno do som.</p>"
+  },
+  audiodescricao: {
+    titulo: "Audiodescrição",
+    texto: "<p><strong>Princípio:</strong> Codificação de dados visuais em ondas audíveis (20 Hz a 20 kHz).</p>" +
+           "<p><strong>Aplicação:</strong> Tradução verbal de gestos, cenários e imagens em tempo real para reconstituição mental da cena em filmes, teatros e livros.</p>"
+  },
+  ultrassom: {
+    titulo: "Sensores Sonoros (Ultrassom)",
+    texto: "<p><strong>Princípio:</strong> Transdução eletroacústica e medição do tempo de voo do ultrassom (> 20 kHz).</p>" +
+           "<p><strong>Aplicação:</strong> Detecção de obstáculos no escuro para sensores de ré automotivos, bengalas inteligentes e robôs.</p>"
+  },
+  voz: {
+    titulo: "Aplicativos de Voz e Leitores de Tela",
+    texto: "<p><strong>Princípio:</strong> Processamento digital de variações de pressão do ar na atmosfera.</p>" +
+           "<p><strong>Aplicação:</strong> Conversão de texto visual em voz sintetizada e processamento de comandos falados em assistentes virtuais.</p>"
+  }
+};
+
 // --- FUNÇÕES DE INTERAÇÃO ---
 
 function alternarArtigo() {
@@ -247,5 +271,15 @@ function mostrarAssistiva(chave) {
   if (tecnologiasAssistivasIA[chave]) {
     titulo.textContent = tecnologiasAssistivasIA[chave].titulo;
     conteudo.innerHTML = tecnologiasAssistivasIA[chave].texto;
+  }
+}
+
+function mostrarSom(chave) {
+  const titulo = document.getElementById('titulo-som');
+  const conteudo = document.getElementById('conteudo-som');
+
+  if (fisicaEosom[chave]) {
+    titulo.textContent = fisicaEosom[chave].titulo;
+    conteudo.innerHTML = fisicaEosom[chave].texto;
   }
 }
