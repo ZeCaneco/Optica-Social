@@ -209,6 +209,56 @@ const fisicaEosom = {
   }
 };
 
+// BANCO DE DADOS 7: CURIOSIDADES CIENTÍFICAS
+const curiosidadesCientificas = {
+  smartphone: {
+    titulo: "Como uma pessoa cega usa um smartphone?",
+    texto: "<p>Utilizam leitores de tela nativos (VoiceOver no iOS ou TalkBack no Android) baseados em comandos táteis:</p>" +
+           "<ul>" +
+             "<li><strong>Exploração ao toque:</strong> Ao deslizar o dedo, o aparelho lê em voz alta o item selecionado.</li>" +
+             "<li><strong>Navegação por varredura:</strong> Deslizar para os lados move o foco entre os elementos.</li>" +
+             "<li><strong>Ativação:</strong> Um duplo toque em qualquer lugar executa a ação.</li>" +
+             "<li><strong>Velocidade de áudio:</strong> O áudio costuma ser ajustado até 3 vezes mais rápido do que o padrão, permitindo que o cérebro adaptado processe informações em alta velocidade.</li>" +
+           "</ul>"
+  },
+  braille: {
+    titulo: "Como funciona o Braille?",
+    texto: "<p>O Braille é um sistema tátil baseado em uma célula de 6 pontos organizados em duas colunas (2 × 3):</p>" +
+           "<ul>" +
+             "<li><strong>Matemática do sistema:</strong> Com os 6 pontos, obtém-se 2⁶ = 64 combinações possíveis (incluindo o espaço em branco).</li>" +
+             "<li><strong>Leitura tátil:</strong> Cada combinação equivale a uma letra, número ou pontuação.</li>" +
+             "<li><strong>Prefixos:</strong> Símbolos especiais indicam se o caractere seguinte representa uma letra maiúscula ou um número.</li>" +
+           "</ul>"
+  },
+  caes_guia: {
+    titulo: "Como os cães-guia são treinados?",
+    texto: "<p>O treinamento dura cerca de dois anos e abrange três etapas:</p>" +
+           "<ul>" +
+             "<li><strong>Socialização (1º ano):</strong> O cão vive com uma família para habituar-se a ambientes públicos e urbanos.</li>" +
+             "<li><strong>Treinamento Técnico (6 a 8 meses):</strong> Aprende a desviar de obstáculos (inclusive aéreos), alinhar-se em faixas e parar antes de degraus.</li>" +
+             "<li><strong>Desobediência Inteligente:</strong> Capacidade de desobedecer ordens do tutor quando houver risco iminente (como um carro em aproximação).</li>" +
+           "</ul>"
+  },
+  semaforo: {
+    titulo: "Como funciona um semáforo sonoro?",
+    texto: "<p>Aparelho que utiliza frequências acústicas e ritmos para orientação espacial:</p>" +
+           "<ul>" +
+             "<li><strong>Sinal de Localização:</strong> Bip lento e suave que indica a localização do poste e da botoeira.</li>" +
+             "<li><strong>Sinal de Travessia:</strong> Bip contínuo ou rápido emitido quando a travessia está liberada.</li>" +
+             "<li><strong>Seta Tátil e Vibração:</strong> A botoeira apresenta uma seta direcional em relevo que vibra enquanto a travessia for segura.</li>" +
+           "</ul>"
+  },
+  ia_acessibilidade: {
+    titulo: "Existe Inteligência Artificial para acessibilidade?",
+    texto: "<p>A IA impulsiona soluções de acessibilidade através de visão computacional e processamento de linguagem:</p>" +
+           "<ul>" +
+             "<li><strong>Descrição de imagens:</strong> Ferramentas analisam o espaço e respondem a perguntas detalhadas sobre o ambiente.</li>" +
+             "<li><strong>Tradução para Libras:</strong> Algoritmos convertem texto e áudio para a Língua Brasileira de Sinais via avatares 3D.</li>" +
+             "<li><strong>Legendas e Audiodescrição:</strong> Identificação automática de falantes e geração de descrições narrativas de cenas.</li>" +
+           "</ul>"
+  }
+};
+
 // --- FUNÇÕES DE INTERAÇÃO ---
 
 function alternarArtigo() {
@@ -281,5 +331,15 @@ function mostrarSom(chave) {
   if (fisicaEosom[chave]) {
     titulo.textContent = fisicaEosom[chave].titulo;
     conteudo.innerHTML = fisicaEosom[chave].texto;
+  }
+}
+
+function mostrarCuriosidade(chave) {
+  const titulo = document.getElementById('titulo-curiosidade');
+  const conteudo = document.getElementById('conteudo-curiosidade');
+
+  if (curiosidadesCientificas[chave]) {
+    titulo.textContent = curiosidadesCientificas[chave].titulo;
+    conteudo.innerHTML = curiosidadesCientificas[chave].texto;
   }
 }
