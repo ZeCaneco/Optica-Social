@@ -259,6 +259,34 @@ const curiosidadesCientificas = {
   }
 };
 
+// BANCO DE DADOS 8: EXPERIMENTOS ÓPTICOS
+const experimentosOpticos = {
+  refracao: {
+    titulo: "Refração usando um copo de água",
+    videoUrl: "https://www.youtube.com/embed/mbJBVbUX-t0"
+  },
+  reflexao: {
+    titulo: "Reflexão em espelhos",
+    videoUrl: "https://www.youtube.com/embed/6EMMF704JSs"
+  },
+  lentes: {
+    titulo: "Lentes de aumento",
+    videoUrl: "https://www.youtube.com/embed/9PIPKSfjwxA"
+  },
+  difracao: {
+    titulo: "Difração da luz",
+    videoUrl: "https://www.youtube.com/embed/9BQmWicideg"
+  },
+  cores: {
+    titulo: "Formação das cores",
+    videoUrl: "https://www.youtube.com/embed/6f1ysCRONgo"
+  },
+  ilusao: {
+    titulo: "Ilusão de óptica",
+    videoUrl: "https://www.youtube.com/embed/D7cn-B8JNPQ"
+  }
+};
+
 // --- FUNÇÕES DE INTERAÇÃO ---
 
 function alternarArtigo() {
@@ -341,5 +369,24 @@ function mostrarCuriosidade(chave) {
   if (curiosidadesCientificas[chave]) {
     titulo.textContent = curiosidadesCientificas[chave].titulo;
     conteudo.innerHTML = curiosidadesCientificas[chave].texto;
+  }
+}
+
+function mostrarExperimento(chave) {
+  const titulo = document.getElementById('titulo-experimento');
+  const conteudo = document.getElementById('conteudo-experimento');
+
+  if (experimentosOpticos[chave]) {
+    titulo.textContent = experimentosOpticos[chave].titulo;
+    conteudo.innerHTML = `
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 10px;">
+        <iframe 
+          src="${experimentosOpticos[chave].videoUrl}" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    `;
   }
 }
