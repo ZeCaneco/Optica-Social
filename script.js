@@ -18,7 +18,7 @@ const teoriasData = {
   },
   maxwell: {
     titulo: "James Clerk Maxwell (1865) - Eletromagnetismo",
-    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnetica que se propaga no vácuo com velocidade constante."
+    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnética que se propaga no vácuo com velocidade constante."
   },
   einstein: {
     titulo: "Albert Einstein (1905) - Efeito Fotoelétrico",
@@ -26,7 +26,7 @@ const teoriasData = {
   },
   debroglie: {
     titulo: "Louis de Broglie (1924) - Dualidade Onda-Partícula",
-    texto: "De Broglie estabeleceu a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
+    texto: "De Broglie established a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
   }
 };
 
@@ -369,5 +369,30 @@ function mostrarDesafio(chave) {
   if (desafiosData[chave] && titulo && conteudo) {
     titulo.textContent = desafiosData[chave].titulo;
     conteudo.innerHTML = `<p>${desafiosData[chave].texto}</p>`;
+  }
+}
+
+// BANCO DE DADOS 13: NOTÍCIAS E TECNOLOGIAS ATUAIS
+const noticiasData = {
+  oculos_ia: {
+    titulo: "Novos Óculos Inteligentes",
+    texto: "Tecnologias como o OrCam MyEye é um óculos integrados com Inteligência Artificial (como modelos da Meta em parceria com a Ray-Ban) agora conseguem ler textos impressos em voz alta, reconhecer rostos de amigos, identificar produtos no supermercado e até descrever o ambiente ao redor para usuários com deficiência visual."
+  },
+  visao_artificial: {
+    titulo: "Pesquisas em Visão Artificial e Implantes de Retina",
+    texto: "O desenvolvimento de 'olhos biônicos' continua avançando. Sistemas como o Prima System (um microchip sem fio implantado sob a retina) e pesquisas com optogenética (que usa terapia gênica para tornar células do olho sensíveis à luz novamente) estão ajudando pessoas com doenças degenerativas, como a retinite pigmentosa, a recuperar a percepção de formas e luzes."
+  },
+  ia_oftalmo: {
+    titulo: "Uso da IA na Medicina Oftalmológica",
+    texto: "A Inteligência Artificial já é usada para analisar exames de fundo de olho de forma autônoma. Softwares aprovados por órgãos de saúde conseguem detectar sinais iniciais de retinopatia diabética ou glaucoma com precisão igual ou superior à de médicos humanos, permitindo tratamentos preventivos muito mais rápidos."
+  }
+};
+
+function mostrarNoticia(chave) {
+  const titulo = document.getElementById('titulo-noticia');
+  const conteudo = document.getElementById('conteudo-noticia');
+  if (noticiasData[chave] && titulo && conteudo) {
+    titulo.textContent = noticiasData[chave].titulo;
+    conteudo.innerHTML = `<p>${noticiasData[chave].texto}</p>`;
   }
 }
