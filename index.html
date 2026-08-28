@@ -79,26 +79,71 @@
 
 
    <!-- ANATOMIA E FÍSICA DA VISÃO -->
-   <section class="card interativo">
-     <h2>Anatomia e Física da Visão</h2>
-     <p>Explore como o olho humano capta e processa os sinais luminosos:</p>
-     <div class="botoes-lentes">
-       <button onclick="mostrarAnatomia('como_luz_entra')">Como a Luz Entra</button>
-       <button onclick="mostrarAnatomia('oque_e_luz')">O que é Luz?</button>
-       <button onclick="mostrarAnatomia('olho')">Anatomia do Olho</button>
-       <button onclick="mostrarAnatomia('imagem')">Formação da Imagem</button>
-       <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
-       <button onclick="mostrarAnatomia('espectro')">Espectro Visível</button>
-       <button onclick="mostrarAnatomia('fenomenos')">Refração no Olho</button>
-       <button onclick="mostrarAnatomia('cores')">Formação das Cores</button>
-     </div>
-     <div class="visao-box">
-       <h3 id="titulo-anatomia">Selecione um conceito</h3>
-       <div id="conteudo-anatomia">
-         <p>Clique nos botões acima para estudar os detalhes fisiológicos e ópticos.</p>
-       </div>
-     </div>
-   </section>
+<section class="card interativo">
+  <h2>Anatomia e Física da Visão</h2>
+  <p>Explore como o olho humano capta e processa os sinais luminosos:</p>
+  <div class="botoes-lentes">
+    <button onclick="mostrarAnatomia('como_luz_entra')">Como a Luz Entra</button>
+    <button onclick="mostrarAnatomia('oque_e_luz')">O que é Luz?</button>
+    <button onclick="mostrarAnatomia('olho')">Anatomia do Olho</button>
+    <button onclick="mostrarAnatomia('imagem')">Formação da Imagem</button>
+    <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
+    <button onclick="mostrarAnatomia('espectro')">Espectro Visível</button>
+    <button onclick="mostrarAnatomia('fenomenos')">Refração no Olho</button>
+    <button onclick="mostrarAnatomia('cores')">Formação das Cores</button>
+  </div>
+
+  <div class="visao-box">
+    <h3 id="titulo-anatomia">Selecione um conceito</h3>
+    <div id="conteudo-anatomia">
+      <p>Clique nos botões acima para estudar os detalhes fisiológicos e ópticos.</p>
+    </div>
+
+    <!-- MAPA INTERATIVO (Escondido por padrão, aparece ao clicar em 'Anatomia do Olho') -->
+    <div id="container-mapa-olho" style="display: none; margin-top: 20px; text-align: center;">
+      <p style="font-weight: bold; color: #0d2b45;">Clique sobre qualquer um dos balões de nome na imagem para ver a definição:</p>
+      
+      <img src="Olho.png" usemap="#mapa-olho" alt="Anatomia do Olho Humano" style="max-width: 100%; height: auto; border-radius: 8px;">
+      
+      <map name="mapa-olho">
+        <!-- CÓRNEA -->
+        <area shape="rect" coords="170,300,290,340" href="javascript:void(0)" onclick="mostrarInfoOlho('cornea')" alt="Córnea">
+        <!-- PUPILA -->
+        <area shape="rect" coords="140,780,260,820" href="javascript:void(0)" onclick="mostrarInfoOlho('pupila')" alt="Pupila">
+        <!-- ÍRIS -->
+        <area shape="rect" coords="170,830,260,870" href="javascript:void(0)" onclick="mostrarInfoOlho('iris')" alt="Íris">
+        <!-- LIGAMENTOS -->
+        <area shape="rect" coords="200,880,330,920" href="javascript:void(0)" onclick="mostrarInfoOlho('ligamentos')" alt="Ligamentos">
+        <!-- CORPO CILIAR -->
+        <area shape="rect" coords="180,80,330,120" href="javascript:void(0)" onclick="mostrarInfoOlho('corpo_ciliar')" alt="Corpo Ciliar">
+        <!-- CRISTALINO -->
+        <area shape="rect" coords="400,310,540,350" href="javascript:void(0)" onclick="mostrarInfoOlho('cristalino')" alt="Cristalino">
+        <!-- HUMOR VÍTREO -->
+        <area shape="rect" coords="440,790,600,830" href="javascript:void(0)" onclick="mostrarInfoOlho('humor_vitreo')" alt="Humor Vítreo">
+        <!-- ESCLERÓTICA -->
+        <area shape="rect" coords="630,40,780,80" href="javascript:void(0)" onclick="mostrarInfoOlho('esclerotica')" alt="Esclerótica">
+        <!-- CORÓIDE -->
+        <area shape="rect" coords="660,150,780,190" href="javascript:void(0)" onclick="mostrarInfoOlho('coroide')" alt="Coróide">
+        <!-- RETINA -->
+        <area shape="rect" coords="720,220,830,260" href="javascript:void(0)" onclick="mostrarInfoOlho('retina')" alt="Retina">
+        <!-- MÁCULA LÚTEA -->
+        <area shape="rect" coords="740,320,890,360" href="javascript:void(0)" onclick="mostrarInfoOlho('macula')" alt="Mácula Lútea">
+        <!-- FÓVEA -->
+        <area shape="rect" coords="750,400,860,440" href="javascript:void(0)" onclick="mostrarInfoOlho('fovea')" alt="Fóvea">
+        <!-- NERVO ÓPTICO -->
+        <area shape="rect" coords="730,480,880,520" href="javascript:void(0)" onclick="mostrarInfoOlho('nervo_optico')" alt="Nervo Óptico">
+        <!-- PONTO CEGO -->
+        <area shape="rect" coords="650,760,780,800" href="javascript:void(0)" onclick="mostrarInfoOlho('ponto_cego')" alt="Ponto Cego">
+      </map>
+
+      <!-- Caixa interna de definição da imagem -->
+      <div style="background-color: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; margin-top: 15px; text-align: left;">
+        <h4 id="titulo-info-olho" style="color: #0d2b45; margin-bottom: 5px;">Selecione uma estrutura no diagrama</h4>
+        <p id="texto-info-olho" style="margin: 0;">Clique sobre os nomes na imagem acima para abrir a explicação detalhada.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
    <!-- DEFICIÊNCIAS E ÓCULOS -->
