@@ -13,7 +13,7 @@ body {
 }
 
 /* CABEÇALHO CENTRALIZADO */
-.header-centralizado {
+header, .header-centralizado {
   background-color: #0d2b45;
   color: #ffffff;
   padding: 25px 20px;
@@ -54,11 +54,16 @@ body {
   border-radius: 50%;
 }
 
-.header-centralizado h1 {
+header h1, .header-centralizado h1 {
   font-size: 2.3rem;
   margin: 0;
   color: #ffffff;
-  line-height: 1;
+  line-height: 1.2;
+}
+
+header p {
+  color: #e0e0e0;
+  margin-top: 8px;
 }
 
 /* CONTAINER PRINCIPAL */
@@ -68,8 +73,8 @@ main {
   padding: 0 20px;
 }
 
-/* CARDS */
-.card {
+/* CARDS E SEÇÕES */
+section, .card {
   background: #ffffff;
   border-radius: 10px;
   padding: 25px;
@@ -77,26 +82,19 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.card h2 {
+h2, .card h2 {
   color: #0d2b45;
   margin-bottom: 10px;
   border-bottom: 2px solid #203c56;
   padding-bottom: 5px;
 }
 
-.card p {
+p {
   margin-bottom: 15px;
 }
 
 /* BOTÕES DE NAVEGAÇÃO / INTERATIVOS */
-.botoes-lentes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-.botoes-lentes button, #btn-ler-mais {
+button, .botoes-lentes button, #btn-ler-mais {
   background-color: #203c56;
   color: white;
   border: none;
@@ -104,11 +102,19 @@ main {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
+  margin: 4px 2px;
   transition: background 0.3s ease;
 }
 
-.botoes-lentes button:hover, #btn-ler-mais:hover {
+button:hover, .botoes-lentes button:hover, #btn-ler-mais:hover {
   background-color: #544e61;
+}
+
+.botoes-lentes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
 }
 
 /* CAIXAS DE EXIBIÇÃO DE CONTEÚDO DENTRO DOS CARDS */
