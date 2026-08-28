@@ -18,7 +18,7 @@ const teoriasData = {
   },
   maxwell: {
     titulo: "James Clerk Maxwell (1865) - Eletromagnetismo",
-    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnética que se propaga no vácuo com velocidade constante."
+    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnetica que se propaga no vácuo com velocidade constante."
   },
   einstein: {
     titulo: "Albert Einstein (1905) - Efeito Fotoelétrico",
@@ -26,7 +26,7 @@ const teoriasData = {
   },
   debroglie: {
     titulo: "Louis de Broglie (1924) - Dualidade Onda-Partícula",
-    texto: "De Broglie established a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
+    texto: "De Broglie estabeleceu a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
   }
 };
 
@@ -394,5 +394,37 @@ function mostrarNoticia(chave) {
   if (noticiasData[chave] && titulo && conteudo) {
     titulo.textContent = noticiasData[chave].titulo;
     conteudo.innerHTML = `<p>${noticiasData[chave].texto}</p>`;
+  }
+}
+
+// BANCO DE DADOS 14: MITOS E VERDADES
+const mitosData = {
+  mito1: {
+    titulo: "Ler no escuro causa cegueira?",
+    resposta: "Mito.",
+    ciencia: "Ler com pouca luz não causa danos físicos permanentes aos olhos nem leva à cegueira. O que acontece é a fadiga ocular (astenopia). No escuro, suas pupilas se dilatam e os músculos dos olhos trabalham muito mais para focar nas palavras, o que pode causar dor de cabeça, olhos secos e cansaço visual, mas os olhos se recuperam após o descanso."
+  },
+  mito2: {
+    titulo: "Usar óculos faz o grau aumentar?",
+    resposta: "Mito.",
+    ciencia: "Os óculos apenas mudam o ângulo em que a luz entra no olho para focar corretamente na retina; eles não alteram a anatomia do globo ocular. O grau de condições como miopia ou astigmatismo muda devido ao crescimento natural do olho (especialmente na infância e adolescência) ou ao envelhecimento natural do cristalino (presbiopia), independentemente de você usar óculos ou não."
+  },
+  mito3: {
+    titulo: "Toda pessoa cega enxerga apenas preto?",
+    resposta: "Mito.",
+    ciencia: "A cegueira é um espectro. Apenas cerca de 10% a 15% das pessoas com deficiência visual têm \"amaurose\" (cegueira total, ausência de percepção de luz). A grande maioria tem visão subnormal, podendo perceber luzes, sombras, vultos ou até cores. Além disso, pessoas com cegueira total de nascença não \"veem preto\", elas simplesmente não veem nada — é a mesma sensação que você tem ao tentar enxergar usando o seu cotovelo. O cérebro não processa estímulos visuais."
+  }
+};
+
+function mostrarMito(chave) {
+  const titulo = document.getElementById('titulo-mito');
+  const conteudo = document.getElementById('conteudo-mito');
+  if (mitosData[chave] && titulo && conteudo) {
+    const item = mitosData[chave];
+    titulo.textContent = item.titulo;
+    conteudo.innerHTML = `
+      <p><strong>Resposta:</strong> ${item.resposta}</p>
+      <p style="margin-top: 10px;"><strong>Ciência:</strong> ${item.ciencia}</p>
+    `;
   }
 }
