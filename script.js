@@ -26,7 +26,7 @@ const teoriasData = {
   },
   debroglie: {
     titulo: "Louis de Broglie (1924) - Dualidade Onda-Partícula",
-    texto: "De Broglie established a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
+    texto: "De Broglie estabeleceu a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
   }
 };
 
@@ -89,7 +89,7 @@ const anatomiaData = {
   },
   oque_e_luz: {
     titulo: "O que é Luz?",
-    texto: "A luz é uma radiação eletromagnética cujos comprimentos de onda estão dentro do espectro visível (aproximadamente entre 380 nm e 750 nm), propagate no vácuo a cerca de 300.000 km/s."
+    texto: "A luz é uma radiação eletromagnética cujos comprimentos de onda estão dentro do espectro visível (aproximadamente entre 380 nm e 750 nm), propaga-se no vácuo a cerca de 300.000 km/s."
   },
   olho: {
     titulo: "Anatomia do Olho Humano",
@@ -266,32 +266,6 @@ function mostrarCuriosidade(chave) {
   }
 }
 
-// BANCO DE DADOS 10: VOCÊ SABIA?
-const voceSabiaData = {
-  cores: {
-    titulo: "1. Você sabia que o olho humano consegue distinguir milhões de cores?",
-    texto: "Sim. Estima-se que o olho humano seja capaz de perceber milhões de variações de cores, graças à ação das células da retina chamadas cones, que detectam diferentes comprimentos de onda da luz."
-  },
-  smartphones: {
-    titulo: "2. Você sabia que pessoas cegas podem utilizar smartphones de forma independente?",
-    texto: "Sim. Smartphones possuem recursos de acessibilidade, como leitores de tela, comandos por voz e gestos específicos, permitindo que pessoas cegas realizem chamadas, enviem mensagens, utilizem aplicativos, naveguem na internet e executem diversas tarefas de forma autônoma."
-  },
-  ia_fotos: {
-    titulo: "3. Você sabia que alguns aplicativos utilizam inteligência artificial para descrever fotografias?",
-    texto: "Sim. Alguns aplicativos usam inteligência artificial para identificar pessoas, objetos, animais, paisagens e textos presentes em imagens, gerando descrições em áudio que auxiliam pessoas com deficiência visual a compreender o conteúdo das fotografias."
-  }
-};
-
-function mostrarVoceSabia(chave) {
-  const titulo = document.getElementById('titulo-vocesabia');
-  const conteudo = document.getElementById('conteudo-vocesabia');
-  
-  if (voceSabiaData[chave] && titulo && conteudo) {
-    titulo.textContent = voceSabiaData[chave].titulo;
-    conteudo.innerHTML = `<p>${voceSabiaData[chave].texto}</p>`;
-  }
-}
-
 // BANCO DE DADOS 9: EXPERIMENTOS ÓPTICOS (COM VÍDEO)
 const experimentosData = {
   refracao: {
@@ -341,5 +315,59 @@ function mostrarExperimento(chave) {
         </video>
       </div>
     `;
+  }
+}
+
+// BANCO DE DADOS 10: VOCÊ SABIA?
+const voceSabiaData = {
+  cores: {
+    titulo: "1. Você sabia que o olho humano consegue distinguir milhões de cores?",
+    texto: "Sim. Estima-se que o olho humano seja capaz de perceber milhões de variações de cores, graças à ação das células da retina chamadas cones, que detectam diferentes comprimentos de onda da luz."
+  },
+  smartphones: {
+    titulo: "2. Você sabia que pessoas cegas podem utilizar smartphones de forma independente?",
+    texto: "Sim. Smartphones possuem recursos de acessibilidade, como leitores de tela, comandos por voz e gestos específicos, permitindo que pessoas cegas realizem chamadas, enviem mensagens, utilizem aplicativos, naveguem na internet e executem diversas tarefas de forma autônoma."
+  },
+  ia_fotos: {
+    titulo: "3. Você sabia que alguns aplicativos utilizam inteligência artificial para descrever fotografias?",
+    texto: "Sim. Alguns aplicativos usam inteligência artificial para identificar pessoas, objetos, animais, paisagens e textos presentes em imagens, gerando descrições em áudio que auxiliam pessoas com deficiência visual a compreender o conteúdo das fotografias."
+  }
+};
+
+function mostrarVoceSabia(chave) {
+  const titulo = document.getElementById('titulo-vocesabia');
+  const conteudo = document.getElementById('conteudo-vocesabia');
+  if (voceSabiaData[chave] && titulo && conteudo) {
+    titulo.textContent = voceSabiaData[chave].titulo;
+    conteudo.innerHTML = `<p>${voceSabiaData[chave].texto}</p>`;
+  }
+}
+
+// BANCO DE DADOS 12: DESAFIOS PARA OS VISITANTES
+const desafiosData = {
+  som: {
+    titulo: "Identificar Objetos pelo Som",
+    texto: "<strong>Dinâmica:</strong> Coloque objetos dentro de caixas opacas e agite-os ou ative-os (ex: chaves, grãos de feijão em um pote, um relógio de corda, plástico amassado).<br><br><strong>Objetivo:</strong> O visitante deve adivinhar o que é sem olhar ou tocar, explorando o reconhecimento auditivo de texturas e materiais."
+  },
+  leitor: {
+    titulo: "Leitor de Tela na Prática",
+    texto: "<strong>Dinâmica:</strong> Configure um notebook ou smartphone com um leitor de tela ativado (como o NVDA para Windows, VoiceOver para Apple ou TalkBack para Android). Desligue o monitor ou cubra a tela.<br><br><strong>Objetivo:</strong> Peça para o visitante tentar abrir um aplicativo específico ou ler a primeira frase de um site de notícias apenas ouvindo a voz sintetizada do sistema."
+  },
+  caminhada: {
+    titulo: "Caminhada Guiada com Venda",
+    texto: "<strong>Dinâmica:</strong> Ensine a técnica correta de guia vidente: a pessoa com os olhos vendados deve segurar no cotovelo do colega que está guiando, um passo atrás. Monte um circuito simples com obstáculos leves (como cadeiras ou cones).<br><br><strong>Objetivo:</strong> Sentir na prática a importância da confiança e da comunicação clara ('degrau à frente', 'vire à esquerda')."
+  },
+  localizacao: {
+    titulo: "Localização Espacial pelo Som",
+    texto: "<strong>Dinâmica:</strong> Em uma sala silenciosa, vende o visitante e peça para ele apontar exatamente de onde vem um som (use um estalar de dedos ou um pequeno sino, mudando de posição ao redor dele).<br><br><strong>Objetivo:</strong> Ilustrar como a audição se torna uma ferramenta fundamental para o mapeamento e orientação espacial."
+  }
+};
+
+function mostrarDesafio(chave) {
+  const titulo = document.getElementById('titulo-desafio');
+  const conteudo = document.getElementById('conteudo-desafio');
+  if (desafiosData[chave] && titulo && conteudo) {
+    titulo.textContent = desafiosData[chave].titulo;
+    conteudo.innerHTML = `<p>${desafiosData[chave].texto}</p>`;
   }
 }

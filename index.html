@@ -3,230 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Óptica-Social</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <title>A Física da Visão e Acessibilidade</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="header-centralizado">
-    <div class="logo-titulo-container">
-      <div class="logo-circle-wrapper">
-        <img src="Logo-Imagem.png" alt="O.P.S. Óptica Social" class="logo-header">
-      </div>
-      <h1>Óptica-Social</h1>
-    </div>
+  <header>
+    <h1>A Física da Visão e Acessibilidade</h1>
+    <p>Explorando a óptica, a percepção humana, tecnologias assistivas e dinâmicas de inclusão.</p>
   </header>
 
-  <main>
-    <!-- 1. HISTÓRIA DA LUZ -->
+  <main class="container">
+
+    <!-- 1. EVOLUÇÃO HISTÓRICA DA LUZ -->
     <section class="card interativo">
-      <h2>Evolução Histórica: A Natureza da Luz</h2>
-      <p>Clique em um cientista ou período para descobrir sua teoria sobre a luz:</p>
+      <h2>1. Evolução Histórica dos Modelos da Luz</h2>
+      <p>Clique nas teorias abaixo para entender a evolução do conceito de luz ao longo da história:</p>
       <div class="botoes-lentes">
-        <button onclick="mostrarTeoria('antiguidade')">Antiguidade</button>
-        <button onclick="mostrarTeoria('huygens')">Huygens</button>
-        <button onclick="mostrarTeoria('newton')">Newton</button>
-        <button onclick="mostrarTeoria('young')">Young</button>
-        <button onclick="mostrarTeoria('maxwell')">Maxwell</button>
-        <button onclick="mostrarTeoria('einstein')">Einstein</button>
-        <button onclick="mostrarTeoria('debroglie')">De Broglie</button>
+        <button onclick="mostrarTeoria('antiguidade')">Antiguidade Clássica</button>
+        <button onclick="mostrarTeoria('huygens')">Huygens (Ondulatória)</button>
+        <button onclick="mostrarTeoria('newton')">Newton (Corpuscular)</button>
+        <button onclick="mostrarTeoria('young')">Young (Fenda Dupla)</button>
+        <button onclick="mostrarTeoria('maxwell')">Maxwell (Eletromagnetismo)</button>
+        <button onclick="mostrarTeoria('einstein')">Einstein (Fótons)</button>
+        <button onclick="mostrarTeoria('debroglie')">De Broglie (Dualidade)</button>
       </div>
-      <div id="caixa-teoria" class="visao-box">
-        <h3 id="titulo-teoria">Selecione um período acima</h3>
+      <div class="visao-box">
+        <h3 id="titulo-teoria">Selecione um modelo acima</h3>
         <div id="conteudo-teoria">
-          <p>Clique nos botões da linha do tempo para explorar a evolução histórica da física óptica!</p>
+          <p>Clique em uma das opções acima para visualizar as informações históricas.</p>
         </div>
       </div>
     </section>
 
-    <!-- 2. ARTIGO EXPANSÍVEL -->
-    <section class="card artigo">
-      <h2>Artigo: A Luz e Sua Importância Tecnocientífica</h2>
-      <p>
-        A luz faz parte da nossa vida diariamente, nos permitindo enxergar e observar o mundo ao nosso redor.
-        Trata-se de uma forma de energia que se propaga por meio de ondas eletromagnéticas e não precisa de um meio material para viajar, podendo se deslocar até mesmo no vácuo.
-      </p>
-      <div id="mais-conteudo-artigo" class="conteudo-escondido" style="display: none;">
-        <p>
-          Além de seu comportamento como onda, ela também é formada por pequenas partículas chamadas fótons.
-          Essa dupla característica (dualidade onda-partícula) ajuda a explicar fenômenos como a reflexão da luz em espelhos, a refração em lentes e a formação das cores.
-        </p>
-        <p>
-          O estudo da luz trouxe grandes avanços para a ciência e a tecnologia. Equipamentos como microscópios, telescópios, lasers e fibras ópticas só existem graças ao conhecimento sobre suas propriedades. Além disso, a luz é essencial para a fotossíntese, processo que garante a manutenção da vida na Terra.
-        </p>
-        <div class="referencias">
-          <h4>Referências Bibliográficas:</h4>
-          <ul>
-            <li>EISBERG, R.; RESNICK, R. <em>Física Quântica</em>. Rio de Janeiro: Campus.</li>
-            <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Rio de Janeiro: LTC.</li>
-            <li>HECHT, E. <em>Óptica</em>. 5. ed. São Paulo: Pearson.</li>
-            <li>TIPLER, P. A.; MOSCA, G. <em>Física para Cientistas e Engenheiros</em>. Rio de Janeiro: LTC.</li>
-          </ul>
-        </div>
+    <!-- 2. ARTIGO DE APROFUNDAMENTO -->
+    <section class="card">
+      <h2>2. Artigo de Aprofundamento</h2>
+      <p>Compreenda como a física da luz se conecta com os avanços tecnológicos e a acessibilidade no cotidiano.</p>
+      <p>A visão é um dos sentidos primários para a percepção do mundo, operando pela captação e focagem da luz na retina. Contudo, o entendimento da física óptica nos permite ir além do canal visual, criando pontes para a inclusão através de tecnologias sonoras e táteis.</p>
+      
+      <div id="mais-conteudo-artigo" style="display: none;">
+        <p>A física moderna possibilita o desenvolvimento de sensores, leitores de tela e inteligência artificial que convertem informações visuais em áudio ou dados táteis. Assim, a ciência não apenas explica como enxergamos, mas amplia a autonomia de pessoas com deficiência visual na sociedade contemporânea.</p>
       </div>
-      <button id="btn-ler-mais" onclick="alternarArtigo()">Ler artigo completo</button>
+      
+      <button id="btn-ler-mais" onclick="alternarArtigo()" class="btn-acao">Ler artigo completo</button>
     </section>
 
     <!-- 3. CONTEXTOS SOCIAIS -->
     <section class="card interativo">
-      <h2>Explore por Contexto Social</h2>
-      <p>Clique em um contexto abaixo para ver a aplicação prática dos equipamentos e princípios ópticos:</p>
+      <h2>3. Aplicações em Contextos Sociais</h2>
+      <p>Descubra como a óptica e a tecnologia estão presentes em diferentes ambientes:</p>
       <div class="botoes-lentes">
         <button onclick="mudarContexto('residencial')">Residencial</button>
         <button onclick="mudarContexto('comercial')">Comercial</button>
         <button onclick="mudarContexto('escolar')">Escolar</button>
         <button onclick="mudarContexto('industrial')">Industrial</button>
       </div>
-      <div id="caixa-visao" class="visao-box">
-        <h3 id="titulo-contexto">Selecione um contexto acima</h3>
+      <div class="visao-box">
+        <h3 id="titulo-contexto">Selecione um ambiente</h3>
         <div id="conteudo-contexto">
-          <p>Clique em um dos botões para explorar os equipamentos e princípios físicos envolvidos.</p>
+          <p>Clique em uma das opções para explorar os exemplos de aplicação.</p>
         </div>
       </div>
     </section>
 
     <!-- 4. ANATOMIA E FÍSICA DA VISÃO -->
     <section class="card interativo">
-      <h2>Como Enxergamos: Anatomia do Olho e Física da Visão</h2>
-      <p>Explore o funcionamento biológico do olho e o comportamento físico dos raios luminosos:</p>
+      <h2>4. Anatomia e Física da Visão</h2>
+      <p>Explore como o olho humano capta e processa os sinais luminosos:</p>
       <div class="botoes-lentes">
-        <button onclick="mostrarAnatomia('como_luz_entra')">Como a Luz Entra no Olho</button>
+        <button onclick="mostrarAnatomia('como_luz_entra')">Como a Luz Entra</button>
         <button onclick="mostrarAnatomia('oque_e_luz')">O que é Luz?</button>
         <button onclick="mostrarAnatomia('olho')">Anatomia do Olho</button>
         <button onclick="mostrarAnatomia('imagem')">Formação da Imagem</button>
         <button onclick="mostrarAnatomia('nervo')">Nervo Óptico</button>
-        <button onclick="mostrarAnatomia('espectro')">Espectro e Luz Visível</button>
-        <button onclick="mostrarAnatomia('fenomenos')">Reflexão e Refração</button>
+        <button onclick="mostrarAnatomia('espectro')">Espectro Visível</button>
+        <button onclick="mostrarAnatomia('fenomenos')">Refração no Olho</button>
         <button onclick="mostrarAnatomia('cores')">Formação das Cores</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-anatomia">Selecione um tópico acima</h3>
+        <h3 id="titulo-anatomia">Selecione um conceito</h3>
         <div id="conteudo-anatomia">
-          <p>Descubra como a estrutura ocular e a física da luz se combinam para gerar a visão.</p>
+          <p>Clique nos botões acima para estudar os detalhes fisiológicos e ópticos.</p>
         </div>
       </div>
     </section>
 
-    <!-- 5. COMO FUNCIONAM OS ÓCULOS E DEFICIÊNCIAS -->
+    <!-- 5. DEFICIÊNCIAS E ÓCULOS -->
     <section class="card interativo">
-      <h2>Como Funcionam os Óculos e Deficiências Visuais</h2>
-      <p>Compreenda as alterações visuais e como as lentes desviam a luz para corrigi-las:</p>
+      <h2>5. Deficiências Visuais e Correções Ópticas</h2>
+      <p>Entenda as principais alterações na visão e o uso de lentes corretivas:</p>
       <div class="botoes-lentes">
         <button onclick="mostrarDeficiencia('miopia')">Miopia</button>
         <button onclick="mostrarDeficiencia('hipermetropia')">Hipermetropia</button>
         <button onclick="mostrarDeficiencia('astigmatismo')">Astigmatismo</button>
         <button onclick="mostrarDeficiencia('cegueira')">Cegueira e Baixa Visão</button>
-        <button onclick="mostrarDeficiencia('patologias')">Catarata, Glaucoma e Mácula</button>
+        <button onclick="mostrarDeficiencia('patologias')">Patologias</button>
         <button onclick="mostrarDeficiencia('daltonismo')">Daltonismo</button>
         <button onclick="mostrarDeficiencia('oculos')">Funcionamento das Lentes</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-deficiencia">Selecione uma opção acima</h3>
+        <h3 id="titulo-deficiencia">Selecione uma condição</h3>
         <div id="conteudo-deficiencia">
-          <p>Explore como a física óptica é utilizada para corrigir deficiências visuais.</p>
+          <p>Clique em uma das opções para entender as causas e as lentes de correção.</p>
         </div>
       </div>
     </section>
 
     <!-- 6. TECNOLOGIAS ASSISTIVAS E IA -->
     <section class="card interativo">
-      <h2>Tecnologias Assistivas e Inteligência Artificial</h2>
-      <p>Conheça as tecnologias avançadas e recursos de acessibilidade no cotidiano:</p>
+      <h2>6. Tecnologias Assistivas e Inteligência Artificial</h2>
+      <p>Conheça as inovações que promovem acessibilidade no dia a dia:</p>
       <div class="botoes-lentes">
         <button onclick="mostrarAssistiva('oculos_inteligentes')">Óculos Inteligentes</button>
-        <button onclick="mostrarAssistiva('apps_acessibilidade')">Aplicativos de Acessibilidade</button>
-        <button onclick="mostrarAssistiva('ia')">Visão Computacional e IA</button>
-        <button onclick="mostrarAssistiva('recursos_ia')">Recursos Práticos de IA</button>
-        <button onclick="mostrarAssistiva('assistivas')">Guias e Dispositivos Assistivos</button>
-        <button onclick="mostrarAssistiva('curiosidades')">Gestos no Celular e Curiosidades</button>
+        <button onclick="mostrarAssistiva('apps_acessibilidade')">Aplicativos</button>
+        <button onclick="mostrarAssistiva('ia')">Visão Computacional</button>
+        <button onclick="mostrarAssistiva('recursos_ia')">Recursos de IA</button>
+        <button onclick="mostrarAssistiva('assistivas')">Dispositivos Assistivos</button>
+        <button onclick="mostrarAssistiva('curiosidades')">Gestos em Celulares</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-assistiva">Selecione uma opção acima</h3>
+        <h3 id="titulo-assistiva">Selecione uma tecnologia</h3>
         <div id="conteudo-assistiva">
-          <p>Descubra o papel da tecnologia, da inteligência artificial e da acessibilidade na vida prática.</p>
+          <p>Clique para ver como a tecnologia melhora a autonomia de pessoas cegas ou com baixa visão.</p>
         </div>
       </div>
     </section>
 
     <!-- 7. FÍSICA E O SOM -->
     <section class="card interativo">
-      <h2>Física e o Som</h2>
-      <p>O som substitui a visão ao converter distâncias, formas e conceitos em ondas mecânicas e sinais acústicos interpretáveis pelo cérebro ou por sensores.</p>
+      <h2>7. Física e o Som como Canal Alternativo</h2>
+      <p>Acoustica e áudio utilizados como ferramentas de navegação e interpretação:</p>
       <div class="botoes-lentes">
         <button onclick="mostrarSom('ecolocalizacao')">Ecolocalização</button>
         <button onclick="mostrarSom('audiodescricao')">Audiodescrição</button>
-        <button onclick="mostrarSom('ultrassom')">Sensores Sonoros (Ultrassom)</button>
-        <button onclick="mostrarSom('voz')">Aplicativos de Voz e Leitores</button>
+        <button onclick="mostrarSom('ultrassom')">Sensores de Ultrassom</button>
+        <button onclick="mostrarSom('voz')">Leitores de Tela</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-som">Selecione uma opção acima</h3>
+        <h3 id="titulo-som">Selecione um tópico</h3>
         <div id="conteudo-som">
-          <p>Clique em uma das opções para aprender como a física do som auxilia na substituição ou complementação da visão.</p>
+          <p>Clique acima para aprender sobre o uso do som na acessibilidade.</p>
         </div>
       </div>
     </section>
 
-    <!-- 8. CURIOSIDADES CIENTÍFICAS SOBRE ACESSIBILIDADE -->
+    <!-- 8. CURIOSIDADES CIENTÍFICAS -->
     <section class="card interativo">
-      <h2>Curiosidades Científicas sobre Acessibilidade</h2>
-      <p>A tecnologia e a ciência da acessibilidade envolvem soluções criativas, engenharia de precisão e biologia comportamental:</p>
+      <h2>8. Curiosidades Científicas</h2>
+      <p>Respostas rápidas para dúvidas frequentes sobre acessibilidade:</p>
       <div class="botoes-lentes">
         <button onclick="mostrarCuriosidade('smartphone')">Uso do Smartphone</button>
-        <button onclick="mostrarCuriosidade('braille')">Funcionamento do Braille</button>
-        <button onclick="mostrarCuriosidade('caes_guia')">Treinamento de Cães-Guia</button>
+        <button onclick="mostrarCuriosidade('braille')">Sistema Braille</button>
+        <button onclick="mostrarCuriosidade('caes_guia')">Cães-Guia</button>
         <button onclick="mostrarCuriosidade('semaforo')">Semáforo Sonoro</button>
-        <button onclick="mostrarCuriosidade('ia_acessibilidade')">IA na Acessibilidade</button>
+        <button onclick="mostrarCuriosidade('ia_acessibilidade')">IA e Acessibilidade</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-curiosidade">Selecione uma curiosidade acima</h3>
+        <h3 id="titulo-curiosidade">Selecione uma curiosidade</h3>
         <div id="conteudo-curiosidade">
-          <p>Clique nos botões acima para descobrir as respostas das principais dúvidas sobre ciência e acessibilidade!</p>
+          <p>Clique nos botões para ler os fatos curiosos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. EXPERIMENTOS ÓPTICOS -->
+    <section class="card interativo">
+      <h2>9. Experimentos Ópticos</h2>
+      <p>Demonstrações práticas de fenômenos ópticos:</p>
+      <div class="botoes-lentes">
+        <button onclick="mostrarExperimento('refracao')">Refração</button>
+        <button onclick="mostrarExperimento('reflexao')">Reflexão</button>
+        <button onclick="mostrarExperimento('lentes')">Lentes de Aumento</button>
+        <button onclick="mostrarExperimento('difracao')">Difração</button>
+        <button onclick="mostrarExperimento('cores')">Disco de Newton</button>
+        <button onclick="mostrarExperimento('ilusao')">Ilusão de Óptica</button>
+      </div>
+      <div class="visao-box">
+        <h3 id="titulo-experimento">Selecione um experimento</h3>
+        <div id="conteudo-experimento">
+          <p>Clique em uma das opções para ver o texto explicativo e o vídeo demonstrativo.</p>
         </div>
       </div>
     </section>
 
     <!-- 10. VOCÊ SABIA? -->
     <section class="card interativo">
-      <h2>10. Você sabia?</h2>
-      <p>Descubra fatos curiosos sobre a percepção de cores, autonomia tecnológica e Inteligência Artificial:</p>
+      <h2>10. Você Sabia?</h2>
+      <p>Fatos marcantes sobre visão e tecnologia:</p>
       <div class="botoes-lentes">
         <button onclick="mostrarVoceSabia('cores')">Percepção de Cores</button>
-        <button onclick="mostrarVoceSabia('smartphones')">Uso de Smartphones</button>
-        <button onclick="mostrarVoceSabia('ia_fotos')">IA para Fotografias</button>
+        <button onclick="mostrarVoceSabia('smartphones')">Autonomia Digital</button>
+        <button onclick="mostrarVoceSabia('ia_fotos')">Descrição de Fotos por IA</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-vocesabia">Selecione uma pergunta acima</h3>
+        <h3 id="titulo-vocesabia">Selecione um fato</h3>
         <div id="conteudo-vocesabia">
-          <p>Clique em um dos botões para visualizar a pergunta e sua resposta!</p>
+          <p>Clique acima para descobrir mais informações.</p>
         </div>
       </div>
     </section>
 
-    <!-- 9. EXPERIMENTOS -->
+    <!-- 12. DESAFIOS PARA OS VISITANTES -->
     <section class="card interativo">
-      <h2>Experimentos Ópticos</h2>
-      <p>Clique em um experimento abaixo para assistir ao vídeo explicativo:</p>
+      <h2>12. Desafios para os Visitantes</h2>
+      <p>Participe destas dinâmicas práticas para vivenciar o uso dos sentidos alternativos e das tecnologias de acessibilidade:</p>
       <div class="botoes-lentes">
-        <button onclick="mostrarExperimento('refracao')">Refração (Copo de Água)</button>
-        <button onclick="mostrarExperimento('reflexao')">Reflexão em Espelhos</button>
-        <button onclick="mostrarExperimento('lentes')">Lentes de Aumento</button>
-        <button onclick="mostrarExperimento('difracao')">Difração da Luz</button>
-        <button onclick="mostrarExperimento('cores')">Formação das Cores</button>
-        <button onclick="mostrarExperimento('ilusao')">Ilusão de Óptica</button>
+        <button onclick="mostrarDesafio('som')">Identificar Objetos pelo Som</button>
+        <button onclick="mostrarDesafio('leitor')">Leitor de Tela na Prática</button>
+        <button onclick="mostrarDesafio('caminhada')">Caminhada Guiada com Venda</button>
+        <button onclick="mostrarDesafio('localizacao')">Localização Espacial pelo Som</button>
       </div>
       <div class="visao-box">
-        <h3 id="titulo-experimento">Selecione um experimento acima</h3>
-        <div id="conteudo-experimento">
-          <p>Clique em uma das opções para carregar e assistir ao vídeo do experimento demonstrativo.</p>
+        <h3 id="titulo-desafio">Selecione um desafio acima</h3>
+        <div id="conteudo-desafio">
+          <p>Clique em uma das opções para visualizar as instruções e a dinâmica do desafio!</p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p>Projeto Educativo Óptica-Social &copy; 2026</p>
+    <p>&copy; Projeto de Física e Acessibilidade — Todos os direitos reservados.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
