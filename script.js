@@ -1,401 +1,274 @@
-// BANCO DE DADOS 1: EVOLUÇÃO HISTÓRICA
+// BANCO DE DADOS 1: EVOLUÇÃO HISTÓRICA DOS MODELOS DA LUZ
 const teoriasData = {
   antiguidade: {
-    titulo: "Antiguidade Clássica (Euclides e Ptolomeu)",
-    texto: "Na Grécia Antiga, acreditava-se na teoria da emissão (ou extramissão), onde o olho emitia raios de luz que 'tocavam' os objetos para enxergá-los. Mais tarde, Alhazen (Ibn al-Haytham) revolucionou a óptica ao provar que a luz viaja dos objetos até nossos olhos."
+    titulo: "Antiguidade Clássica (Pitágoras, Euclides, Ptolomeu)",
+    texto: "Na Antiguidade, predominava a teoria da emissão (ou extramissão), proposta por filósofos e matemáticos como Pitágoras e Euclides. Acreditava-se que os próprios olhos emitiam raios ou 'tentáculos visuais' que tocavam os objetos, permitindo a visão. Mais tarde, Alhazen (Ibn al-Haytham), no século XI, revolucionou a óptica ao provar experimentalmente que a luz entra nos olhos vinda das fontes luminosas ou refletida pelos objetos."
   },
   huygens: {
-    titulo: "Christiaan Huygens (1678) - Teoria Ondulatória",
-    texto: "Huygens propôs que a luz se comporta como uma onda mecânica se propagando por um meio hipotético chamado 'éter'. Sua teoria explicava muito bem fenômenos como reflexão e refração."
+    titulo: "Christiaan Huygens (Teoria Ondulatória - 1678)",
+    texto: "Huygens propôs que a luz se propaga em forma de ondas longitudinais através de um meio hipotético chamado 'éter luminífero'. O Modelo Ondulatório explicava com facilidade os fenômenos de reflexão e refração, prevendo que a luz se deslocava mais devagar em meios mais densos (como a água e o vidro)."
   },
   newton: {
-    titulo: "Isaac Newton (1704) - Teoria Corpuscular",
-    texto: "Newton defendia que a luz era composta por pequenas partículas (corpúsculos) emitidas por fontes luminosas. Ele explicou a decomposição da luz branca nos prismas, embora sua teoria falhasse em explicar a difração."
+    titulo: "Isaac Newton (Teoria Corpuscular - 1704)",
+    texto: "Newton defendia que a luz era composta por uma corrente de minúsculas partículas ou 'corpúsculos' emitidos em linha reta por corpos luminosos. Com a decomposição da luz branca em um prisma, ele demonstrou que a cor é uma propriedade intrínseca da luz, e não criada pelos materiais."
   },
   young: {
-    titulo: "Thomas Young (1801) - Experimento da Fenda Dupla",
-    texto: "Young demonstrou conclusivamente o fenômeno da interferência luminosa através do famoso experimento da fenda dupla, provando a natureza ondulatória da luz e enfraquecendo a teoria corpuscular de Newton."
+    titulo: "Thomas Young e Augustin-Jean Fresnel (Interferência - Século XIX)",
+    texto: "Young realizou o famoso experimento da fenda dupla (1801), demonstrando a interferência e a difração da luz — fenômenos exclusivos de ondas. Fresnel complementou matematicamente a teoria, estabelecendo que as ondas luminosas são transversais."
   },
   maxwell: {
-    titulo: "James Clerk Maxwell (1865) - Eletromagnetismo",
-    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnetica que se propaga no vácuo com velocidade constante."
+    titulo: "James Clerk Maxwell (Ondas Eletromagnéticas - 1865)",
+    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica em um único conjunto de equações. Ele demonstrou teoricamente que a luz é uma onda eletromagnética transversal que se propaga no vácuo com velocidade constante (c ≈ 300.000 km/s)."
   },
   einstein: {
-    titulo: "Albert Einstein (1905) - Efeito Fotoelétrico",
-    texto: "Einstein explicou o efeito fotoelétrico sugerindo que a luz é emitida e absorvida em pacotes discretos de energia chamados 'quanta' de luz (mais tarde chamados de fótons), reacendendo a ideia de partícula."
+    titulo: "Albert Einstein (Efeito Fotoelétrico e Fótons - 1905)",
+    texto: "Ao explicar o Efeito Fotoelétrico (pelo qual ganhou o Prêmio Nobel de Física), Einstein resgatou a ideia de pacotes discretos de energia, chamados de 'quanta' de luz ou fótons. A energia de cada fóton depende diretamente de sua frequência (E = h·f)."
   },
   debroglie: {
-    titulo: "Louis de Broglie (1924) - Dualidade Onda-Partícula",
-    texto: "De Broglie estabeleceu a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
+    titulo: "Louis de Broglie e a Mecânica Quântica (Dualidade Onda-Partícula)",
+    texto: "Em 1924, De Broglie estabeleceu que todas as partículas e a radiação eletromagnética possuem uma natureza dual: em certos experimentos (como a difração), a luz se comporta como onda; em outros (como o efeito fotoelétrico), se comporta como feixe de partículas (fótons)."
   }
 };
-
-function mostrarTeoria(chave) {
-  const titulo = document.getElementById('titulo-teoria');
-  const conteudo = document.getElementById('conteudo-teoria');
-  if (teoriasData[chave]) {
-    titulo.textContent = teoriasData[chave].titulo;
-    conteudo.innerHTML = `<p>${teoriasData[chave].texto}</p>`;
-  }
-}
-
-// ALTERNAR LEITURA DO ARTIGO
-function alternarArtigo() {
-  const maisConteudo = document.getElementById('mais-conteudo-artigo');
-  const btn = document.getElementById('btn-ler-mais');
-  if (maisConteudo.style.display === 'none' || maisConteudo.style.display === '') {
-    maisConteudo.style.display = 'block';
-    btn.textContent = 'Ler menos';
-  } else {
-    maisConteudo.style.display = 'none';
-    btn.textContent = 'Ler artigo completo';
-  }
-}
 
 // BANCO DE DADOS 3: CONTEXTOS SOCIAIS
 const contextosData = {
   residencial: {
     titulo: "Ambiente Residencial",
-    texto: "Lâmpadas LED energeticamente eficientes utilizam semicondutores para emissão de luz. Telas de TV e smartphones empregam tecnologia OLED ou LCD para emissão direta de fótons coloridos. Espelhos planos aplicam as leis da reflexão regular."
+    texto: "Utilização de lâmpadas LED inteligentes com ajuste de temperatura de cor, pisos táteis nas áreas comuns e sistemas de iluminação automatizados para auxiliar pessoas com baixa visão no reconhecimento de cômodos e obstáculos."
   },
   comercial: {
     titulo: "Ambiente Comercial",
-    texto: "Leitores de código de barras em caixas funcionam por meio de lasers que detectam a reflexão diferencial nas barras pretas e brancas. Iluminação direcionada cria foco visual em produtos usando refletores parabólicos."
+    texto: "Sinalização tátil em Braille, contraste visual adequado nas saídas e degraus, além de integração de leitores de código de barras em áudio para autonomia de compras."
   },
   escolar: {
     titulo: "Ambiente Escolar",
-    texto: "Projetores utilizam lentes convergentes para ampliar imagens de matrizes digitais na tela. Microscópios nos laboratórios combinam duas ou mais lentes para aumentar o ângulo visual de estruturas celulares."
+    texto: "Uso de lupas eletrônicas, telas adaptadas com alto contraste, audiolivros, materiais pedagógicos em relevo e iluminação direcionada em salas de aula para inclusão de alunos com deficiência visual."
   },
   industrial: {
     titulo: "Ambiente Industrial",
-    texto: "Sensores ópticos industriais usam fotocélulas para contagem de peças em esteiras. Lasers de alta potência realizam cortes de precisão em metais por meio de convergência de energia luminosa altamente focada."
+    texto: "Dispositivos de segurança baseados em sensores ultrassônicos e ópticos, sinalização luminescente de emergência e alertas sonoros adaptados para ambientes fabris acessíveis."
   }
 };
-
-function mudarContexto(chave) {
-  const titulo = document.getElementById('titulo-contexto');
-  const conteudo = document.getElementById('conteudo-contexto');
-  if (contextosData[chave]) {
-    titulo.textContent = contextosData[chave].titulo;
-    conteudo.innerHTML = `<p>${contextosData[chave].texto}</p>`;
-  }
-}
 
 // BANCO DE DADOS 4: ANATOMIA E FÍSICA DA VISÃO
 const anatomiaData = {
   como_luz_entra: {
     titulo: "Como a Luz Entra no Olho",
-    texto: "A luz atravessa a córnea, passa pela pupila (cujo diâmetro é ajustado pela íris) e atravessa o cristalino. O cristalino foca os raios diretamente sobre a retina, criando uma imagem invertida que o cérebro posteriormente interpreta."
+    texto: "A luz entra pela córnea, passa pela pupila (cujo diâmetro é controlado pela íris), atravessa o cristalino e projeta uma imagem invertida na retina."
   },
   oque_e_luz: {
-    titulo: "O que é Luz?",
-    texto: "A luz é uma radiação eletromagnética cujos comprimentos de onda estão dentro do espectro visível (aproximadamente entre 380 nm e 750 nm), propaga-se no vácuo a cerca de 300.000 km/s."
+    titulo: "O que é a Luz?",
+    texto: "A luz é uma onda eletromagnética capaz de sensibilizar os fotorreceptores localizados na retina do olho humano."
   },
   olho: {
     titulo: "Anatomia do Olho Humano",
-    texto: "Composta por Córnea (refração inicial), Íris (controle de luz), Pupila (abertura), Cristalino (lente ajustável), Retina (sensor de fótons), Cones (visão de cores) e Bastonetes (visão noturna e contornos)."
+    texto: "Composto por Córnea, Íris, Pupila, Cristalino, Retina, Esclera, Humor Aquoso, Humor Vítreo e Nervo Óptico."
   },
   imagem: {
     titulo: "Formação da Imagem",
-    texto: "O conjunto Córnea + Cristalino atua como uma lente convergente. A imagem formada na retina é real, invertida e menor que o objeto original."
+    texto: "A córnea e o cristalino funcionam como lentes convergentes que focam os raios luminosos exatamente sobre a retina."
   },
   nervo: {
     titulo: "Nervo Óptico",
-    texto: "Os fotorreceptores da retina convertem os impulsos luminosos em sinais elétricos. O nervo óptico conduz esses impulsos até o córtex visual no cérebro, onde a imagem é invertida e processada."
+    texto: "Responsável por conduzir os impulsos elétricos gerados pelos fotorreceptores da retina até o córtex visual no cérebro."
   },
   espectro: {
-    titulo: "Espectro e Luz Visível",
-    texto: "A luz visível é apenas uma pequena fração do espectro eletromagnético, situado entre o infravermelho e o ultravioleta."
+    titulo: "Espectro Visível",
+    texto: "A faixa do espectro eletromagnético que o olho humano consegue perceber, variando aproximadamente de 380 nm (violeta) a 750 nm (vermelho)."
   },
   fenomenos: {
-    titulo: "Reflexão e Refração no Olho",
-    texto: "A refração ocorre quando a luz muda de velocidade ao passar do ar para a córnea e humor aquoso, permitindo a focagem perfeita do feixe luminoso na retina."
+    titulo: "Refração no Olho",
+    texto: "A mudança de velocidade e direção da luz ao passar pelo meio córnea/humor aquoso/cristalino, necessária para focar a imagem."
   },
   cores: {
     titulo: "Formação das Cores",
-    texto: "A percepção de cores ocorre no cérebro a partir do estímulo de três tipos de cones na retina, sensíveis às faixas do Vermelho, Verde e Azul (sistema RGB natural)."
+    texto: "Percebida através de células fotossensíveis chamadas cones (sensíveis ao vermelho, verde e azul - sistema RGB)."
   }
 };
 
-function mostrarAnatomia(chave) {
-  const titulo = document.getElementById('titulo-anatomia');
-  const conteudo = document.getElementById('conteudo-anatomia');
-  if (anatomiaData[chave]) {
-    titulo.textContent = anatomiaData[chave].titulo;
-    conteudo.innerHTML = `<p>${anatomiaData[chave].texto}</p>`;
-  }
-}
-
-// BANCO DE DADOS 5: DEFICIÊNCIAS E ÓCULOS
-const deficienciasData = {
+// BANCO DE DADOS 5: DEFICIÊNCIAS VISUAIS
+const deficienciaData = {
   miopia: {
     titulo: "Miopia",
-    texto: "Dificuldade para enxergar de longe. O olho é mais 'alongado' que o normal e a imagem se forma antes da retina. Correção: Lentes Divergentes (Côncavas)."
+    texto: "O globo ocular é mais longo que o normal, fazendo com que a imagem se forme antes da retina. Dificuldade para enxergar de longe. Correção: Lentes Divergentes."
   },
   hipermetropia: {
     titulo: "Hipermetropia",
-    texto: "Dificuldade para enxergar de perto. O olho é mais 'curto' e a imagem se forma atrás da retina. Correção: Lentes Convergentes (Convexas)."
+    texto: "O globo ocular é mais curto que o normal, fazendo a imagem se formar atrás da retina. Dificuldade para enxergar de perto. Correção: Lentes Convergentes."
   },
   astigmatismo: {
     titulo: "Astigmatismo",
-    texto: "Irregularidade na curvatura da córnea que faz com que a luz se foque em múltiplos pontos, distorcendo a visão. Correção: Lentes Cilíndricas."
+    texto: "Irregularidade na curvatura da córnea, gerando múltiplos pontos de foco. A imagem fica embaçada tanto de perto quanto de longe. Correção: Lentes Cilíndricas."
   },
   cegueira: {
     titulo: "Cegueira e Baixa Visão",
-    texto: "A cegueira pode ser total ou parcial. Pessoas com baixa visão possuem acuidade reduzida que não pode ser totalmente corrigida com óculos comuns, necessitando de lupas ou recursos digitais."
+    texto: "A baixa visão é a perda parcial irreparável da visão; a cegueira total é a ausência de percepção de luz. Ambas demandam recursos e tecnologias assistivas."
   },
   patologias: {
-    titulo: "Catarata, Glaucoma e Mácula",
-    texto: "Catarata é a opacificação do cristalino. Glaucoma é o aumento da pressão intraocular que danifica o nervo óptico. Degeneração Macular afeta o centro da retina responsável pela visão de detalhes."
+    titulo: "Patologias Oculares",
+    texto: "Doenças como Catarata (opacificação do cristalino), Glaucoma (aumento da pressão intraocular) e Degeneração Macular afetam a qualidade da visão."
   },
   daltonismo: {
     titulo: "Daltonismo",
-    texto: "Condição genética em que há alteração na sensibilidade dos cones, dificultando a distinção de certas cores (geralmente verde e vermelho)."
+    texto: "Condição genética que altera a sensibilidade dos cones na retina, dificultando a distinção de certas cores (principalmente vermelho e verde)."
   },
   oculos: {
     titulo: "Funcionamento das Lentes",
-    texto: "As lentes dos óculos alteram o trajeto dos raios de luz por meio do fenômeno da refração, fazendo com que o ponto focal coincida perfeitamente sobre a retina."
+    texto: "Lentes ópticas alteram a trajetória dos raios luminosos por refração para ajustar a formação do foco exatamente sobre a retina."
   }
 };
 
-function mostrarDeficiencia(chave) {
-  const titulo = document.getElementById('titulo-deficiencia');
-  const conteudo = document.getElementById('conteudo-deficiencia');
-  if (deficienciasData[chave]) {
-    titulo.textContent = deficienciasData[chave].titulo;
-    conteudo.innerHTML = `<p>${deficienciasData[chave].texto}</p>`;
-  }
-}
-
 // BANCO DE DADOS 6: TECNOLOGIAS ASSISTIVAS E IA
-const assistivasData = {
+const assistivaData = {
   oculos_inteligentes: {
     titulo: "Óculos Inteligentes",
-    texto: "Dispositivos equipados com câmeras e IA que capturam o ambiente em tempo real e narram para o usuário o que está ao seu redor (ex: OrCam MyEye)."
+    texto: "Equipados com câmeras e IA para ler textos, reconhecer rostos, identificar objetos e narrar em tempo real pelo fone de ouvido."
   },
   apps_acessibilidade: {
     titulo: "Aplicativos de Acessibilidade",
-    texto: "Ferramentas para dispositivos móveis como 'Be My Eyes' (conecta voluntários via vídeo) e 'Seeing AI' (lê textos, reconhece notas de dinheiro e descreve cenas)."
+    texto: "Apps como Be My Eyes e Seeing AI que auxiliam no reconhecimento de notas de dinheiro, cores, textos e produtos em supermercados."
   },
   ia: {
-    titulo: "Visão Computacional e IA",
-    texto: "Algoritmos de rede neural treinados para identificar objetos, pessoas, obstáculos e texto escrito em imagens capturadas por sensores ópticos."
+    titulo: "Visão Computacional",
+    texto: "Algoritmos de aprendizado profundo que processam imagens do ambiente e convertem a cena visual em descrições em áudio."
   },
   recursos_ia: {
-    titulo: "Recursos Práticos de IA",
-    texto: "A IA é usada para gerar audiodescrições automáticas em tempo real, transcrever fala em texto e traduzir conteúdos de maneira fluida."
+    titulo: "Recursos de IA",
+    texto: "Ferramentas integradas ao sistema operacional que geram áudios descritivos automáticos para imagens na internet."
   },
   assistivas: {
-    titulo: "Guias e Dispositivos Assistivos",
-    texto: "Bengalas eletrônicas com sensores ultrassônicos que vibram para alertar sobre obstáculos aéreos ou distantes."
+    titulo: "Dispositivos Assistivos",
+    texto: "Linhas Braille dinâmicas, bengalas inteligentes com sensores ultrassônicos e leitores de tela com voz sintetizada."
   },
   curiosidades: {
-    titulo: "Gestos no Celular e Acessibilidade",
-    texto: "Sistemas como TalkBack (Android) e VoiceOver (iOS) mudam os gestos do celular: um toque seleciona e fala o item, dois toques abrem o aplicativo."
+    titulo: "Gestos em Celulares",
+    texto: "Sistemas como TalkBack (Android) e VoiceOver (iOS) utilizam gestos específicos na tela de toque para navegação totalmente sem visão."
   }
 };
-
-function mostrarAssistiva(chave) {
-  const titulo = document.getElementById('titulo-assistiva');
-  const conteudo = document.getElementById('conteudo-assistiva');
-  if (assistivasData[chave]) {
-    titulo.textContent = assistivasData[chave].titulo;
-    conteudo.innerHTML = `<p>${assistivasData[chave].texto}</p>`;
-  }
-}
 
 // BANCO DE DADOS 7: FÍSICA E O SOM
 const somData = {
   ecolocalizacao: {
     titulo: "Ecolocalização Humana",
-    texto: "Algumas pessoas cegas desenvolvem a capacidade de emitir estalos com a língua e escutar o eco do som refletido nos objetos, mapeando a distância e o tamanho dos obstáculos."
+    texto: "Capacidade de emitir estalos com a língua e interpretar as ondas sonoras refletidas pelos obstáculos para mapear o espaço ao redor."
   },
   audiodescricao: {
     titulo: "Audiodescrição",
-    texto: "Recurso que traduz imagens em palavras faladas, permitindo que pessoas cegas ou com baixa visão compreendam filmes, peças de teatro e eventos visuais."
+    texto: "Técnica de tradução visual que descreve verbalmente imagens, filmes, teatro e obras de arte para pessoas cegas."
   },
   ultrassom: {
-    titulo: "Sensores Sonoros (Ultrassom)",
-    texto: "Dispositivos emitindo pulsos de som imperceptíveis ao ouvido humano que medem o tempo de retorno do eco para calcular a distância exata de barreiras."
+    titulo: "Sensores de Ultrassom",
+    texto: "Dispositivos que emitem ondas sonoras de alta frequência inacessíveis ao ouvido humano para medir distâncias e alertar sobre obstáculos."
   },
   voz: {
-    titulo: "Aplicativos de Voz e Leitores de Tela",
-    texto: "Softwares sintetizadores de voz que transformam textos na tela em som audível, garantindo autonomia na navegação na internet e uso de computadores."
+    titulo: "Leitores de Tela",
+    texto: "Softwares como NVDA e JAWS que convertem o texto na tela do computador/celular em síntese de voz."
   }
 };
 
-function mostrarSom(chave) {
-  const titulo = document.getElementById('titulo-som');
-  const conteudo = document.getElementById('conteudo-som');
-  if (somData[chave]) {
-    titulo.textContent = somData[chave].titulo;
-    conteudo.innerHTML = `<p>${somData[chave].texto}</p>`;
-  }
-}
-
 // BANCO DE DADOS 8: CURIOSIDADES CIENTÍFICAS
-const curiosidadeData = {
+const curiosidadesData = {
   smartphone: {
-    titulo: "Como pessoas cegas usam smartphone?",
-    texto: "Através de leitores de tela acoplados ao sistema operacional que navegam falando cada item selecionado, além de suporte a gestos específicos."
+    titulo: "Como Pessoas Cegas Usam Smartphone?",
+    texto: "Através de leitores de tela integrados (VoiceOver e TalkBack) que leem o conteúdo sob o toque do usuário com rapidez impressionante."
   },
   braille: {
-    titulo: "Como funciona o Braille?",
-    texto: "O Braille é um sistema tátil composto por células de 6 pontos relevados em matriz de 2x3, permitindo 64 combinações de letras, números e pontuações."
+    titulo: "O Sistema Braille",
+    texto: "Criado por Louis Braille em 1825, baseia-se em uma cela tátil de 6 pontos relevados permitindo 64 combinações de letras e símbolos."
   },
   caes_guia: {
-    titulo: "Treinamento de Cães-Guia",
-    texto: "Passam por cerca de 2 anos de adestramento intenso para aprender desvio de obstáculos, desobediência inteligente (para proteger o dono) e rotas diárias."
+    titulo: "Cães-Guia",
+    texto: "Animais altamente treinados para desviar de obstáculos aéreos e terrestres, indicar degraus e ajudar na travessia segura de ruas."
   },
   semaforo: {
     titulo: "Semáforo Sonoro",
-    texto: "Emite sinais sonoros em frequências e ritmos variados indicando quando é seguro ou proibido atravessar a rua."
+    texto: "Sinais de trânsito que emitem sons bip em ritmos e frequências diferentes para avisar o momento seguro de atravessar."
   },
   ia_acessibilidade: {
     titulo: "IA na Acessibilidade",
-    texto: "A Inteligência Artificial reconhece padrões visuais rapidamente e lê textos longos, notas de dinheiro ou reconhece rostos de conhecidos."
+    texto: "Modelos de linguagem avançados analisam fotos complexas e descrevem detalhes sutis de expressões emocionais e vestuário."
   }
 };
 
-function mostrarCuriosidade(chave) {
-  const titulo = document.getElementById('titulo-curiosidade');
-  const conteudo = document.getElementById('conteudo-curiosidade');
-  if (curiosidadeData[chave]) {
-    titulo.textContent = curiosidadeData[chave].titulo;
-    conteudo.innerHTML = `<p>${curiosidadeData[chave].texto}</p>`;
-  }
-}
-
-// BANCO DE DADOS 9: EXPERIMENTOS ÓPTICOS (COM VÍDEO)
-const experimentosData = {
+// BANCO DE DADOS 9: EXPERIMENTOS ÓPTICOS
+const experimentoData = {
   refracao: {
-    titulo: "Refração (Copo de Água)",
-    texto: "Veja a luz mudar de direção ao passar do ar para a água e inverter a seta desenhada atrás do copo.",
-    video: "video-refracao.mp4"
+    titulo: "Refração na Água",
+    texto: "Ao colocar um lápis dentro de um copo com água, ele parece quebrado devido à mudança da velocidade da luz ao mudar de meio."
   },
   reflexao: {
-    titulo: "Reflexão em Espelhos",
-    texto: "Demonstração prática das leis da reflexão e formação de múltiplas imagens em espelhos angulares.",
-    video: "video-reflexao.mp4"
+    titulo: "Reflexão em Espelhos Planos",
+    texto: "Demonstração das leis da reflexão: o ângulo de incidência é sempre igual ao ângulo de reflexão em relação à normal."
   },
   lentes: {
     titulo: "Lentes de Aumento",
-    texto: "Como lentes convergentes refratam os raios de luz focando-os para ampliar objetos.",
-    video: "video-lentes.mp4"
+    texto: "Uso de lentes convergentes para focar raios de luz paralelos no ponto focal, aumentando o tamanho aparente do objeto."
   },
   difracao: {
-    titulo: "Difração da Luz",
-    texto: "A luz contornando obstáculos e gerando padrões de interferência em superfícies de CDs.",
-    video: "video-difracao.mp4"
+    titulo: "Difração com CD/DVD",
+    texto: "Os sulcos microscópicos na superfície de um CD atuam como uma rede de difração, decompondo a luz branca nas cores do arco-íris."
   },
   cores: {
-    titulo: "Formação das Cores (Disco de Newton)",
-    texto: "Ao girar o disco colorido rapidamente, as cores se sobrepõem formando a ilusão da cor branca.",
-    video: "video-cores.mp4"
+    titulo: "Disco de Newton",
+    texto: "Ao girar rapidamente um disco pintado com as cores do espectro, a sobreposição das imagens na retina forma o branco."
   },
   ilusao: {
     titulo: "Ilusão de Óptica",
-    texto: "Como o cérebro e os olhos podem ser enganados por padrões específicos de luz e contraste.",
-    video: "video-ilusao.mp4"
+    texto: "Demonstra como o cérebro processa e interpreta atalhos visuais, podendo enganar nossa percepção do espaço e movimento."
   }
 };
-
-function mostrarExperimento(chave) {
-  const titulo = document.getElementById('titulo-experimento');
-  const conteudo = document.getElementById('conteudo-experimento');
-  if (experimentosData[chave]) {
-    const exp = experimentosData[chave];
-    titulo.textContent = exp.titulo;
-    conteudo.innerHTML = `
-      <p>${exp.texto}</p>
-      <div style="margin-top: 15px;">
-        <video controls style="width: 100%; max-width: 600px; border-radius: 8px;">
-          <source src="${exp.video}" type="video/mp4">
-          Seu navegador não suporta a exibição deste vídeo.
-        </video>
-      </div>
-    `;
-  }
-}
 
 // BANCO DE DADOS 10: VOCÊ SABIA?
 const voceSabiaData = {
   cores: {
-    titulo: "1. Você sabia que o olho humano consegue distinguir milhões de cores?",
-    texto: "Sim. Estima-se que o olho humano seja capaz de perceber milhões de variações de cores, graças à ação das células da retina chamadas cones, que detectam diferentes comprimentos de onda da luz."
+    titulo: "Percepção de Cores",
+    texto: "Sabia que os cães não enxergam em preto e branco? Eles possuem visão dicromática, enxergando tons de azul e amarelo!"
   },
   smartphones: {
-    titulo: "2. Você sabia que pessoas cegas podem utilizar smartphones de forma independente?",
-    texto: "Sim. Smartphones possuem recursos de acessibilidade, como leitores de tela, comandos por voz e gestos específicos, permitindo que pessoas cegas realizem chamadas, enviem mensagens, utilizem aplicativos, naveguem na internet e executem diversas tarefas de forma autônoma."
+    titulo: "Autonomia Digital",
+    texto: "Smartphones modernos contam com recursos nativos de acessibilidade que permitem o uso completo sem olhar para a tela."
   },
   ia_fotos: {
-    titulo: "3. Você sabia que alguns aplicativos utilizam inteligência artificial para descrever fotografias?",
-    texto: "Sim. Alguns aplicativos usam inteligência artificial para identificar pessoas, objetos, animais, paisagens e textos presentes em imagens, gerando descrições em áudio que auxiliam pessoas com deficiência visual a compreender o conteúdo das fotografias."
+    titulo: "Descrição de Fotos por IA",
+    texto: "Algoritmos modernos conseguem descrever uma foto em detalhes em menos de 1 segundo para um leitor de tela."
   }
 };
 
-function mostrarVoceSabia(chave) {
-  const titulo = document.getElementById('titulo-vocesabia');
-  const conteudo = document.getElementById('conteudo-vocesabia');
-  if (voceSabiaData[chave] && titulo && conteudo) {
-    titulo.textContent = voceSabiaData[chave].titulo;
-    conteudo.innerHTML = `<p>${voceSabiaData[chave].texto}</p>`;
-  }
-}
-
 // BANCO DE DADOS 12: DESAFIOS PARA OS VISITANTES
-const desafiosData = {
+const desafioData = {
   som: {
     titulo: "Identificar Objetos pelo Som",
-    texto: "<strong>Dinâmica:</strong> Coloque objetos dentro de caixas opacas e agite-os ou ative-os (ex: chaves, grãos de feijão em um pote, um relógio de corda, plástico amassado).<br><br><strong>Objetivo:</strong> O visitante deve adivinhar o que é sem olhar ou tocar, explorando o reconhecimento auditivo de texturas e materiais."
+    texto: "Feche os olhos e tente reconhecer materiais (moedas, chaves, papéis) apenas pelo som emitido ao manuseá-los."
   },
   leitor: {
     titulo: "Leitor de Tela na Prática",
-    texto: "<strong>Dinâmica:</strong> Configure um notebook ou smartphone com um leitor de tela ativado (como o NVDA para Windows, VoiceOver para Apple ou TalkBack para Android). Desligue o monitor ou cubra a tela.<br><br><strong>Objetivo:</strong> Peça para o visitante tentar abrir um aplicativo específico ou ler a primeira frase de um site de notícias apenas ouvindo a voz sintetizada do sistema."
+    texto: "Tente ativar o recurso TalkBack ou VoiceOver do seu celular por 5 minutos mantendo os olhos fechados."
   },
   caminhada: {
     titulo: "Caminhada Guiada com Venda",
-    texto: "<strong>Dinâmica:</strong> Ensine a técnica correta de guia vidente: a pessoa com os olhos vendados deve segurar no cotovelo do colega que está guiando, um passo atrás. Monte um circuito simples com obstáculos leves (como cadeiras ou cones).<br><br><strong>Objetivo:</strong> Sentir na prática a importância da confiança e da comunicação clara ('degrau à frente', 'vire à esquerda')."
+    texto: "Em duplas, um participante usa venda enquanto o outro orienta o trajeto por um ambiente seguro apenas com toques e voz."
   },
   localizacao: {
     titulo: "Localização Espacial pelo Som",
-    texto: "<strong>Dinâmica:</strong> Em uma sala silenciosa, vende o visitante e peça para ele apontar exatamente de onde vem um som (use um estalar de dedos ou um pequeno sino, mudando de posição ao redor dele).<br><br><strong>Objetivo:</strong> Ilustrar como a audição se torna uma ferramenta fundamental para o mapeamento e orientação espacial."
+    texto: "Tente identificar de qual direção (frente, trás, esquerda, direita) vem um estalar de dedos com os olhos vendados."
   }
 };
-
-function mostrarDesafio(chave) {
-  const titulo = document.getElementById('titulo-desafio');
-  const conteudo = document.getElementById('conteudo-desafio');
-  if (desafiosData[chave] && titulo && conteudo) {
-    titulo.textContent = desafiosData[chave].titulo;
-    conteudo.innerHTML = `<p>${desafiosData[chave].texto}</p>`;
-  }
-}
 
 // BANCO DE DADOS 13: NOTÍCIAS E TECNOLOGIAS ATUAIS
-const noticiasData = {
+const noticiaData = {
   oculos_ia: {
     titulo: "Novos Óculos Inteligentes",
-    texto: "Tecnologias como o OrCam MyEye é um óculos integrados com Inteligência Artificial (como modelos da Meta em parceria com a Ray-Ban) agora conseguem ler textos impressos em voz alta, reconhecer rostos de amigos, identificar produtos no supermercado e até descrever o ambiente ao redor para usuários com deficiência visual."
+    texto: "Inovações recentes integram assistentes de inteligência artificial generativa em óculos leves e discretos."
   },
   visao_artificial: {
-    titulo: "Pesquisas em Visão Artificial e Implantes de Retina",
-    texto: "O desenvolvimento de 'olhos biônicos' continua avançando. Sistemas como o Prima System (um microchip sem fio implantado sob a retina) e pesquisas com optogenética (que usa terapia gênica para tornar células do olho sensíveis à luz novamente) estão ajudando pessoas com doenças degenerativas, como a retinite pigmentosa, a recuperar a percepção de formas e luzes."
+    titulo: "Visão Artificial e Implantes",
+    texto: "Avanços em próteses biónicas e implantes retinianos começam a devolver a percepção de focos de luz a pessoas cegas."
   },
   ia_oftalmo: {
-    titulo: "Uso da IA na Medicina Oftalmológica",
-    texto: "A Inteligência Artificial já é usada para analisar exames de fundo de olho de forma autônoma. Softwares aprovados por órgãos de saúde conseguem detectar sinais iniciais de retinopatia diabética ou glaucoma com precisão igual ou superior à de médicos humanos, permitindo tratamentos preventivos muito mais rápidos."
+    titulo: "IA na Medicina Oftalmológica",
+    texto: "Sistemas de IA já detectam sinais de glaucoma e retinopatia diabética em exames de fundo de olho com alta precisão."
   }
 };
-
-function mostrarNoticia(chave) {
-  const titulo = document.getElementById('titulo-noticia');
-  const conteudo = document.getElementById('conteudo-noticia');
-  if (noticiasData[chave] && titulo && conteudo) {
-    titulo.textContent = noticiasData[chave].titulo;
-    conteudo.innerHTML = `<p>${noticiasData[chave].texto}</p>`;
-  }
-}
 
 // BANCO DE DADOS 14: MITOS E VERDADES
 const mitosData = {
@@ -407,24 +280,129 @@ const mitosData = {
   mito2: {
     titulo: "Usar óculos faz o grau aumentar?",
     resposta: "Mito.",
-    ciencia: "Os óculos apenas mudam o ângulo em que a luz entra no olho para focar corretamente na retina; eles não alteram a anatomia do globo ocular. O grau de condições como miopia ou astigmatismo muda devido ao crescimento natural do olho (especialmente na infância e adolescência) ou ao envelhecimento natural do cristalino (presbiopia), independentemente de você usar óculos ou não."
+    ciencia: "Os óculos apenas mudam o ângulo em que a luz entra no olho para focar corretamente na retina; eles não alteram a anatomia do globo ocular. O grau de condições como miopia ou astigmatismo muda devido ao crescimento natural do olho ou ao envelhecimento natural do cristalino (presbiopia), independentemente de você usar óculos ou não."
   },
   mito3: {
     titulo: "Toda pessoa cega enxerga apenas preto?",
     resposta: "Mito.",
-    ciencia: "A cegueira é um espectro. Apenas cerca de 10% a 15% das pessoas com deficiência visual têm \"amaurose\" (cegueira total, ausência de percepção de luz). A grande maioria tem visão subnormal, podendo perceber luzes, sombras, vultos ou até cores. Além disso, pessoas com cegueira total de nascença não \"veem preto\", elas simplesmente não veem nada — é a mesma sensação que você tem ao tentar enxergar usando o seu cotovelo. O cérebro não processa estímulos visuais."
+    ciencia: "A cegueira é um espectro. Apenas cerca de 10% a 15% das pessoas com deficiência visual têm amaurose (cegueira total, ausência de percepção de luz). A grande maioria tem visão subnormal, podendo perceber luzes, sombras, vultos ou até cores. Além disso, pessoas com cegueira total de nascença não 'veem preto', elas simplesmente não veem nada — o cérebro não processa estímulos visuais."
   }
 };
 
+
+// ==========================================
+// FUNÇÕES DE INTERAÇÃO (CLIQUE DOS BOTÕES)
+// ==========================================
+
+function mostrarTeoria(chave) {
+  const item = teoriasData[chave];
+  if (item) {
+    document.getElementById('titulo-teoria').innerText = item.titulo;
+    document.getElementById('conteudo-teoria').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function alternarArtigo() {
+  const conteudoadicional = document.getElementById('mais-conteudo-artigo');
+  const btn = document.getElementById('btn-ler-mais');
+  
+  if (conteudoadicional.style.display === 'none' || conteudoadicional.style.display === '') {
+    conteudoadicional.style.display = 'block';
+    btn.innerText = 'Ler menos';
+  } else {
+    conteudoadicional.style.display = 'none';
+    btn.innerText = 'Ler artigo completo';
+  }
+}
+
+function mudarContexto(chave) {
+  const item = contextosData[chave];
+  if (item) {
+    document.getElementById('titulo-contexto').innerText = item.titulo;
+    document.getElementById('conteudo-contexto').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarAnatomia(chave) {
+  const item = anatomiaData[chave];
+  if (item) {
+    document.getElementById('titulo-anatomia').innerText = item.titulo;
+    document.getElementById('conteudo-anatomia').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarDeficiencia(chave) {
+  const item = deficienciaData[chave];
+  if (item) {
+    document.getElementById('titulo-deficiencia').innerText = item.titulo;
+    document.getElementById('conteudo-deficiencia').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarAssistiva(chave) {
+  const item = assistivaData[chave];
+  if (item) {
+    document.getElementById('titulo-assistiva').innerText = item.titulo;
+    document.getElementById('conteudo-assistiva').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarSom(chave) {
+  const item = somData[chave];
+  if (item) {
+    document.getElementById('titulo-som').innerText = item.titulo;
+    document.getElementById('conteudo-som').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarCuriosidade(chave) {
+  const item = curiosidadesData[chave];
+  if (item) {
+    document.getElementById('titulo-curiosidade').innerText = item.titulo;
+    document.getElementById('conteudo-curiosidade').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarExperimento(chave) {
+  const item = experimentoData[chave];
+  if (item) {
+    document.getElementById('titulo-experimento').innerText = item.titulo;
+    document.getElementById('conteudo-experimento').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarVoceSabia(chave) {
+  const item = voceSabiaData[chave];
+  if (item) {
+    document.getElementById('titulo-vocesabia').innerText = item.titulo;
+    document.getElementById('conteudo-vocesabia').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarDesafio(chave) {
+  const item = desafioData[chave];
+  if (item) {
+    document.getElementById('titulo-desafio').innerText = item.titulo;
+    document.getElementById('conteudo-desafio').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+function mostrarNoticia(chave) {
+  const item = noticiaData[chave];
+  if (item) {
+    document.getElementById('titulo-noticia').innerText = item.titulo;
+    document.getElementById('conteudo-noticia').innerHTML = `<p>${item.texto}</p>`;
+  }
+}
+
+// FUNÇÃO DO TÓPICO 14: MITOS E VERDADES
 function mostrarMito(chave) {
-  const titulo = document.getElementById('titulo-mito');
-  const conteudo = document.getElementById('conteudo-mito');
-  if (mitosData[chave] && titulo && conteudo) {
-    const item = mitosData[chave];
-    titulo.textContent = item.titulo;
-    conteudo.innerHTML = `
-      <p><strong>Resposta:</strong> ${item.resposta}</p>
-      <p style="margin-top: 10px;"><strong>Ciência:</strong> ${item.ciencia}</p>
+  const item = mitosData[chave];
+  if (item) {
+    document.getElementById('titulo-mito').innerText = item.titulo;
+    document.getElementById('conteudo-mito').innerHTML = `
+      <p><strong>Resultado:</strong> ${item.resposta}</p>
+      <p><strong>Explicação Científica:</strong> ${item.ciencia}</p>
     `;
   }
 }
