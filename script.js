@@ -18,7 +18,7 @@ const teoriasData = {
   },
   maxwell: {
     titulo: "James Clerk Maxwell (1865) - Eletromagnetismo",
-    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnética que se propaga no vácuo com velocidade constante."
+    texto: "Maxwell unificou a eletricidade, o magnetismo e a óptica ao demonstrar matematicamente que a luz é uma onda eletromagnetica que se propaga no vácuo com velocidade constante."
   },
   einstein: {
     titulo: "Albert Einstein (1905) - Efeito Fotoelétrico",
@@ -26,7 +26,7 @@ const teoriasData = {
   },
   debroglie: {
     titulo: "Louis de Broglie (1924) - Dualidade Onda-Partícula",
-    texto: "De Broglie estabeleceu a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
+    texto: "De Broglie established a física quântica moderna ao demonstrar que a luz (e a matéria) possui natureza dual: comporta-se tanto como onda quanto como partícula, dependendo do experimento realizado."
   }
 };
 
@@ -285,7 +285,8 @@ const voceSabiaData = {
 function mostrarVoceSabia(chave) {
   const titulo = document.getElementById('titulo-vocesabia');
   const conteudo = document.getElementById('conteudo-vocesabia');
-  if (voceSabiaData[chave]) {
+  
+  if (voceSabiaData[chave] && titulo && conteudo) {
     titulo.textContent = voceSabiaData[chave].titulo;
     conteudo.innerHTML = `<p>${voceSabiaData[chave].texto}</p>`;
   }
